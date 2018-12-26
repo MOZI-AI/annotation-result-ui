@@ -36,8 +36,8 @@ describe("<Result>", () => {
 
   it("shows 'link will expire' notice", () => {
     const progressProps = {
-      progress: 12,
-      status: AnalysisStatus.ACTIVE,
+      progress: 100,
+      status: AnalysisStatus.COMPLETED,
       start: 1318781876406,
       end: 13187848764606,
       message: null,
@@ -51,8 +51,8 @@ describe("<Result>", () => {
 
   it("shows 'link did expire' notice", () => {
     const progressProps = {
-      progress: 12,
-      status: AnalysisStatus.ACTIVE,
+      progress: 100,
+      status: AnalysisStatus.COMPLETED,
       start: 1318781876406,
       end: 13187848764606,
       message: null,
