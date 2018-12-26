@@ -11,7 +11,8 @@ describe("<Result>", () => {
       start: 1318781876406,
       end: 13187848764606,
       message: null,
-      downloadResult: null
+      downloadResult: null,
+      expirationTime: 1
     };
 
     const wrapper = shallow(<Result {...progressProps} />);
@@ -25,25 +26,41 @@ describe("<Result>", () => {
       start: 1318781876406,
       end: 13187848764606,
       message: "Error message",
-      downloadResult: null
+      downloadResult: null,
+      expirationTime: 1
     };
 
     const wrapper = shallow(<Result {...progressProps} />);
     expect(wrapper.find("Alert#errorMessage").exists()).toBeTruthy();
   });
 
-  it("shows active progress bar if analysis is ongoing", () => {
+  it("shows 'link will expire' notice", () => {
     const progressProps = {
       progress: 12,
       status: AnalysisStatus.ACTIVE,
       start: 1318781876406,
       end: 13187848764606,
       message: null,
-      downloadResult: null
+      downloadResult: null,
+      expirationTime: 1
     };
 
     const wrapper = shallow(<Result {...progressProps} />);
-    const progressBar = wrapper.find("Progress");
-    expect(progressBar.props().status).toBe("active");
+    expect(wrapper.find("Alert#willExpireNotice").exists()).toBeTruthy();
+  });
+
+  it("shows 'link did expire' notice", () => {
+    const progressProps = {
+      progress: 12,
+      status: AnalysisStatus.ACTIVE,
+      start: 1318781876406,
+      end: 13187848764606,
+      message: null,
+      downloadResult: null,
+      expirationTime: 0
+    };
+
+    const wrapper = shallow(<Result {...progressProps} />);
+    expect(wrapper.find("Alert#didExpireNotice").exists()).toBeTruthy();
   });
 });

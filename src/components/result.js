@@ -41,15 +41,43 @@ export const Result = props => {
           Analysis completed after
           {" " + moment.duration(moment(end).diff(moment(start))).humanize()}
           {progressBar}
-          <Button
-            id="downloadAnalysisResult"
-            type="primary"
-            onClick={downloadResult}
-            style={{ marginTop: "15px" }}
-          >
-            <Icon type="download" />
-            Download analysis results
-          </Button>
+          {expirationTime ? (
+            <React.Fragment>
+              <Alert
+                id="willExpireNotice"
+                style={{ marginTop: "15px" }}
+                type="warning"
+                message={
+                  "The download link will expire in " +
+                  moment.duration(expirationTime, "seconds").humanize()
+                }
+                closable
+                closeText="I know"
+                description={
+                  "You may download the analysis result file within " +
+                  moment.duration(expirationTime, "seconds").humanize() +
+                  ". The link will expire afterwards."
+                }
+              />
+              <Button
+                id="downloadAnalysisResult"
+                type="primary"
+                onClick={downloadResult}
+                style={{ marginTop: "15px" }}
+              >
+                <Icon type="download" />
+                Download analysis results
+              </Button>
+            </React.Fragment>
+          ) : (
+            <Alert
+              id="didExpireNotice"
+              style={{ marginTop: "15px" }}
+              type="error"
+              message="Link expired"
+              description="You can no longer access analysis results"
+            />
+          )}
         </span>
       )}
 
@@ -82,22 +110,6 @@ export const Result = props => {
           }
         />
       )}
-
-      <Alert
-        style={{ marginTop: "15px" }}
-        type="warning"
-        message={
-          "This link will expire " +
-          moment.duration(expirationTime, "seconds").humanize(true)
-        }
-        closable
-        closeText={"I know"}
-        description={
-          "You may download the analysis result file within " +
-          moment.duration(expirationTime, "seconds").humanize() +
-          ". The link will expire afterwards."
-        }
-      />
     </React.Fragment>
   );
 };

@@ -26,6 +26,7 @@ export class AnalysisResult extends React.Component {
     if (id) {
       this.setState({ analysisId: id, fetchingResult: true });
       this.props.fetchAnalysisStatus(id).then(response => {
+        console.log("Response ", response);
         this.setState({
           fetchingResult: false,
           analysisStatus: response.status,
@@ -33,7 +34,7 @@ export class AnalysisResult extends React.Component {
           analysisStartTime: response.start_time,
           analysisEndTime: response.end_time,
           analysisStatusMessage: response.message,
-          expirationTime: response.expirationTime
+          expirationTime: response.expire_time
         });
       });
     }
@@ -54,6 +55,7 @@ export class AnalysisResult extends React.Component {
   }
 
   render() {
+    console.log("Expire time", this.state.expirationTime);
     const progressProps = {
       progress: this.state.analysisProgress,
       status: this.state.analysisStatus,
@@ -67,7 +69,7 @@ export class AnalysisResult extends React.Component {
     return (
       <React.Fragment>
         <Row type="flex" justify="center" style={{ paddingTop: "90px" }}>
-          <Col span={8} style={{ textAlign: "center" }}>
+          <Col xs={24} sm={18} md={10} style={{ textAlign: "center" }}>
             <img src={logo} style={{ width: "100px" }} />
             <h2 style={{ marginBottom: "30px" }}>Mozi service results</h2>
             {this.state.analysisStatus ? (
