@@ -4,7 +4,15 @@ import moment from "moment";
 import { AnalysisStatus } from "../utils";
 
 export const Result = props => {
-  const { progress, status, start, end, message, downloadResult } = props;
+  const {
+    progress,
+    status,
+    start,
+    end,
+    message,
+    downloadResult,
+    expirationTime
+  } = props;
   const progressBarProps = {
     percent: progress
   };
@@ -74,6 +82,22 @@ export const Result = props => {
           }
         />
       )}
+
+      <Alert
+        style={{ marginTop: "15px" }}
+        type="warning"
+        message={
+          "This link will expire " +
+          moment.duration(expirationTime, "seconds").humanize(true)
+        }
+        closable
+        closeText={"I know"}
+        description={
+          "You may download the analysis result file within " +
+          moment.duration(expirationTime, "seconds").humanize() +
+          ". The link will expire afterwards."
+        }
+      />
     </React.Fragment>
   );
 };

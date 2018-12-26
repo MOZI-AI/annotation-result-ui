@@ -15,7 +15,8 @@ export class AnalysisResult extends React.Component {
       analysisStartTime: null,
       analysisEndTime: null,
       analysisStatusMessage: null,
-      fetchingResult: false
+      fetchingResult: false,
+      expirationTime: 234600
     };
     this.downloadResult = this.downloadResult.bind(this);
   }
@@ -31,7 +32,8 @@ export class AnalysisResult extends React.Component {
           analysisProgress: response.progress,
           analysisStartTime: response.start_time,
           analysisEndTime: response.end_time,
-          analysisStatusMessage: response.message
+          analysisStatusMessage: response.message,
+          expirationTime: response.expirationTime
         });
       });
     }
@@ -58,7 +60,8 @@ export class AnalysisResult extends React.Component {
       start: this.state.analysisStartTime,
       end: this.state.analysisEndTime,
       message: this.state.analysisStatusMessage,
-      downloadResult: this.downloadResult
+      downloadResult: this.downloadResult,
+      expirationTime: this.state.expirationTime
     };
 
     return (
