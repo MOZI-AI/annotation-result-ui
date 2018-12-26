@@ -38,11 +38,12 @@ export const Result = props => {
 
       {status === AnalysisStatus.COMPLETED && (
         <span>
-          Analysis completed after
-          {" " + moment.duration(moment(end).diff(moment(start))).humanize()}
-          {progressBar}
-          {expirationTime ? (
+          {expirationTime > 0 ? (
             <React.Fragment>
+              Analysis completed after
+              {" " +
+                moment.duration(moment(end).diff(moment(start))).humanize()}
+              {progressBar}
               <Alert
                 id="willExpireNotice"
                 style={{ marginTop: "15px" }}
@@ -52,7 +53,6 @@ export const Result = props => {
                   moment.duration(expirationTime, "seconds").humanize()
                 }
                 closable
-                closeText="I know"
                 description={
                   "You may download the analysis result file within " +
                   moment.duration(expirationTime, "seconds").humanize() +

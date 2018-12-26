@@ -69,9 +69,9 @@ export class AnalysisResult extends React.Component {
     return (
       <React.Fragment>
         <Row type="flex" justify="center" style={{ paddingTop: "90px" }}>
-          <Col xs={24} sm={18} md={10} style={{ textAlign: "center" }}>
-            <img src={logo} style={{ width: "100px" }} />
-            <h2 style={{ marginBottom: "30px" }}>Mozi service results</h2>
+          <Col xs={24} sm={18} md={8} style={{ textAlign: "center" }}>
+            <img src={logo} style={{ width: "100px", marginBottom: "15px" }} />
+            <br />
             {this.state.analysisStatus ? (
               <Result {...progressProps} />
             ) : this.state.analysisId ? (
