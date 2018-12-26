@@ -4,7 +4,7 @@ export const AnalysisStatus = {
   ERROR: -1
 };
 
-export const SERVER_ADDRESS =
+export const SERVER_ADDRESS = "http://30d1d7c6.ngrok.io/" || 
   process.env.SERVICE_ADDR || "http://localhost:5000/";
 
 export const getQueryValue = variable => {

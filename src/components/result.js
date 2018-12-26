@@ -4,7 +4,15 @@ import moment from "moment";
 import { AnalysisStatus } from "../utils";
 
 export const Result = props => {
-  const { progress, status, start, end, message, downloadResult } = props;
+  const {
+    progress,
+    status,
+    start,
+    end,
+    message,
+    downloadResult,
+    expirationTime
+  } = props;
   const progressBarProps = {
     percent: progress
   };
@@ -30,18 +38,46 @@ export const Result = props => {
 
       {status === AnalysisStatus.COMPLETED && (
         <span>
-          Analysis completed after
-          {" " + moment.duration(moment(end).diff(moment(start))).humanize()}
-          {progressBar}
-          <Button
-            id="downloadAnalysisResult"
-            type="primary"
-            onClick={downloadResult}
-            style={{ marginTop: "15px" }}
-          >
-            <Icon type="download" />
-            Download analysis results
-          </Button>
+          {expirationTime > 0 ? (
+            <React.Fragment>
+              Analysis completed after
+              {" " +
+                moment.duration(moment(end).diff(moment(start))).humanize()}
+              {progressBar}
+              <Alert
+                id="willExpireNotice"
+                style={{ marginTop: "15px" }}
+                type="warning"
+                message={
+                  "The download link will expire in " +
+                  moment.duration(expirationTime, "seconds").humanize()
+                }
+                closable
+                description={
+                  "You may download the analysis result file within " +
+                  moment.duration(expirationTime, "seconds").humanize() +
+                  ". The link will expire afterwards."
+                }
+              />
+              <Button
+                id="downloadAnalysisResult"
+                type="primary"
+                onClick={downloadResult}
+                style={{ marginTop: "15px" }}
+              >
+                <Icon type="download" />
+                Download analysis results
+              </Button>
+            </React.Fragment>
+          ) : (
+            <Alert
+              id="didExpireNotice"
+              style={{ marginTop: "15px" }}
+              type="error"
+              message="Link expired"
+              description="You can no longer access analysis results"
+            />
+          )}
         </span>
       )}
 

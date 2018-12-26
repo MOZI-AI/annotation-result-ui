@@ -15,7 +15,8 @@ export class AnalysisResult extends React.Component {
       analysisStartTime: null,
       analysisEndTime: null,
       analysisStatusMessage: null,
-      fetchingResult: false
+      fetchingResult: false,
+      expirationTime: 234600
     };
     this.downloadResult = this.downloadResult.bind(this);
   }
@@ -25,13 +26,15 @@ export class AnalysisResult extends React.Component {
     if (id) {
       this.setState({ analysisId: id, fetchingResult: true });
       this.props.fetchAnalysisStatus(id).then(response => {
+        console.log("Response ", response);
         this.setState({
           fetchingResult: false,
           analysisStatus: response.status,
           analysisProgress: response.progress,
           analysisStartTime: response.start_time,
           analysisEndTime: response.end_time,
-          analysisStatusMessage: response.message
+          analysisStatusMessage: response.message,
+          expirationTime: response.expire_time
         });
       });
     }
@@ -52,21 +55,23 @@ export class AnalysisResult extends React.Component {
   }
 
   render() {
+    console.log("Expire time", this.state.expirationTime);
     const progressProps = {
       progress: this.state.analysisProgress,
       status: this.state.analysisStatus,
       start: this.state.analysisStartTime,
       end: this.state.analysisEndTime,
       message: this.state.analysisStatusMessage,
-      downloadResult: this.downloadResult
+      downloadResult: this.downloadResult,
+      expirationTime: this.state.expirationTime
     };
 
     return (
       <React.Fragment>
         <Row type="flex" justify="center" style={{ paddingTop: "90px" }}>
-          <Col span={8} style={{ textAlign: "center" }}>
-            <img src={logo} style={{ width: "100px" }} />
-            <h2 style={{ marginBottom: "30px" }}>Mozi service results</h2>
+          <Col xs={24} sm={18} md={8} style={{ textAlign: "center" }}>
+            <img src={logo} style={{ width: "100px", marginBottom: "15px" }} />
+            <br />
             {this.state.analysisStatus ? (
               <Result {...progressProps} />
             ) : this.state.analysisId ? (
