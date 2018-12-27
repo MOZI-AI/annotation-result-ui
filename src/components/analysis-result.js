@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, message, Alert } from "antd";
 import { Result } from "./result";
 import { Loader } from "./loader";
-import { AnalysisStatus } from "../utils";
+import { AnalysisStatus, SERVER_ADDRESS } from "../utils";
 import logo from "../assets/mozi_globe.png";
 
 export class AnalysisResult extends React.Component {
