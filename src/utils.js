@@ -18,7 +18,7 @@ export const getQueryValue = variable => {
 };
 
 export const fetchAnalysisStatus = id => {
-  return fetch(SERVER_ADDRESS + "status/" + id).then(response =>
+  return fetch(`http://${SERVER_ADDRESS}/status/id`).then(response =>
     response.json()
   );
 };

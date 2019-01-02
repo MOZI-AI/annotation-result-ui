@@ -51,7 +51,7 @@ export class AnalysisResult extends React.Component {
   }
 
   downloadResult() {
-    window.open(SERVER_ADDRESS + "result/" + this.state.analysisId, "_blank");
+    window.open(`http://${SERVER_ADDRESS}/result/${this.state.analysisId}`, "_blank");
   }
 
   render() {
