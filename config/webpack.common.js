@@ -68,6 +68,11 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.DefinePlugin({
+      "process.env": {
+        SERVICE_ADDR: JSON.stringify(process.env.SERVICE_ADDR)
+      }
+    }),
     new HtmlWebpackPlugin({
       inject: true,
       template: path.join(paths.srcPath, "index.html"),
