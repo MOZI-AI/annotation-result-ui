@@ -9,7 +9,7 @@ This application helps track the progress of a particular moses analysis and dow
 2. Go into the project folder and install dependencies \
 ``` cd service-result ``` \
 ``` npm i ``` 
-3. Define SERVICE_ADDR enviroment variable. It should point to the server that responds with the status of moses analysis runs.
+3. Define SERVICE_ADDR enviroment variable. It should point to the server that responds with the status of moses analysis runs.\
 ```export SERVICE_ADDR=<ADDR>```
 
 3. Run the project \
