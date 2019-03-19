@@ -4,7 +4,7 @@ import { Button, Grid } from "@material-ui/core";
 import { Visualizer } from "./visualizer";
 import { parse, distanceInWordsToNow } from "date-fns";
 import LinearProgress from "@material-ui/core/LinearProgress";
-import Typography from "@material-ui/core/Typography";
+
 
 export const SERVER_ADDRESS = process.env.SERVICE_ADDR
   ? `http://${process.env.SERVICE_ADDR}:3200`
@@ -49,7 +49,6 @@ export class AnnotationResult extends React.Component {
     if (id) {
       this.setState({ fetchingResult: true });
       fetchAnnotationStatus(id).then(response => {
-        console.log("Response ", response);
         this.setState({
           fetchingResult: false,
           response: response
@@ -68,10 +67,8 @@ export class AnnotationResult extends React.Component {
   renderHeader() {
     return (
       <div style={{ marginTop: "20vh", marginBottom: 30 }}>
-        <img src={logo} style={{ width: "100px", marginBottom: 5 }} />
-        <Typography component="h1" variant="h5" gutterBottom>
-          Gene annotation result
-        </Typography>
+        <img src={logo} style={{ width: "100px", marginBottom: 0 }} />
+        <h1 style={{ marginTop: 0 }}>Gene annotation result</h1>
       </div>
     );
   }
@@ -109,20 +106,24 @@ export class AnnotationResult extends React.Component {
 
   renderError() {
     const id = getQueryValue("id");
-    return id ? (
-      this.state.response &&
-      this.state.response.status === AnnotationStatus.ERROR ? (
-        <p>
-          An error occured while annotating the genes. You might have entered
-          invalid gene names.
-        </p>
-      ) : this.state.fetchingResult ? null : (
-        <p>
-          There is no annotation session with the id <b>{id}</b>
-        </p>
-      )
-    ) : (
-      <p>Invalid URL</p>
+    return (
+      <div style={{ color: "maroon"}}>
+        {id ? (
+          this.state.response &&
+          this.state.response.status === AnnotationStatus.ERROR ? (
+            <p>
+              An error occured while annotating the genes. You might have
+              entered invalid gene names.
+            </p>
+          ) : this.state.fetchingResult ? null : (
+            <p>
+              There is no annotation session with the id <b>{id}</b>
+            </p>
+          )
+        ) : (
+          <p>Invalid URL</p>
+        )}
+      </div>
     );
   }
 
@@ -162,7 +163,7 @@ export class AnnotationResult extends React.Component {
                 }}
               >
                 Fetching results ...
-                <LinearProgress style={{ width: 250, marginTop: 5 }} />
+                <LinearProgress  style={{ width: 300, marginTop: 5 }} />
               </div>
             )}
           </Grid>
