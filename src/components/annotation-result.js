@@ -3,7 +3,8 @@ import logo from "../assets/mozi_globe.png";
 import { Button, Grid } from "@material-ui/core";
 import { Visualizer } from "./visualizer";
 import { parse, distanceInWordsToNow } from "date-fns";
-import CircularProgress from "@material-ui/core/CircularProgress";
+import LinearProgress from "@material-ui/core/LinearProgress";
+import Typography from "@material-ui/core/Typography";
 
 export const SERVER_ADDRESS = process.env.SERVICE_ADDR
   ? `http://${process.env.SERVICE_ADDR}:3200`
@@ -66,9 +67,11 @@ export class AnnotationResult extends React.Component {
 
   renderHeader() {
     return (
-      <div style={{ marginTop: "20vh" }}>
-        <img src={logo} style={{ width: "100px", marginBottom: "15px" }} />
-        <h1>Annotation Result</h1>
+      <div style={{ marginTop: "20vh", marginBottom: 30 }}>
+        <img src={logo} style={{ width: "100px", marginBottom: 5 }} />
+        <Typography component="h1" variant="h5" gutterBottom>
+          Gene annotation result
+        </Typography>
       </div>
     );
   }
@@ -153,16 +156,13 @@ export class AnnotationResult extends React.Component {
                   width: "100vw",
                   textAlign: "center",
                   display: "flex",
+                  flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center"
                 }}
               >
-                <CircularProgress
-                  color="primary"
-                  size={36}
-                  style={{ marginRight: 15 }}
-                />{" "}
                 Fetching results ...
+                <LinearProgress style={{ width: 250, marginTop: 5 }} />
               </div>
             )}
           </Grid>
