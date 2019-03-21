@@ -7,7 +7,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 
 export const SERVER_ADDRESS = process.env.SERVICE_ADDR
   ? `http://${process.env.SERVICE_ADDR}:3200`
-  : "https://90d31d81.ngrok.io";
+  : "http://localhost:3200";
 
 export const AnnotationStatus = {
   ACTIVE: 1,
@@ -78,7 +78,7 @@ export class AnnotationResult extends React.Component {
           {graph.edges.length} connections between them.
           <br />
           This page will expire in{" "}
-          {distanceInWordsToNow(parse(response.expire_time))} .
+          {distanceInWordsToNow(parse(response.expire_time * 1000))}.
         </p>
         <Button
           variant="contained"
