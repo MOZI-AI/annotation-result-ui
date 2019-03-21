@@ -360,7 +360,7 @@ export class Visualizer extends React.Component {
               </Tooltip>
 
               <Tooltip placement="right" title="Download scheme file">
-                <IconButton onClick={e => this.props.downloadSchemeFile()}>
+                <IconButton onClick={this.props.downloadSchemeFile}>
                   <FileCopyOutlined />
                 </IconButton>
               </Tooltip>

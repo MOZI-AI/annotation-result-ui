@@ -5,10 +5,9 @@ import { Visualizer } from "./visualizer";
 import { parse, distanceInWordsToNow } from "date-fns";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
-
 export const SERVER_ADDRESS = process.env.SERVICE_ADDR
   ? `http://${process.env.SERVICE_ADDR}:3200`
-  : "http://localhost:3200";
+  : "https://90d31d81.ngrok.io";
 
 export const AnnotationStatus = {
   ACTIVE: 1,
@@ -58,10 +57,7 @@ export class AnnotationResult extends React.Component {
   }
 
   downloadSchemeFile() {
-    window.open(
-      `http://${SERVER_ADDRESS}:5000/result/${this.state.annotationId}`,
-      "_blank"
-    );
+    window.open(`${SERVER_ADDRESS}/result_file/${getQueryValue("id")}`);
   }
 
   renderHeader() {
@@ -84,7 +80,11 @@ export class AnnotationResult extends React.Component {
           This page will expire in{" "}
           {distanceInWordsToNow(parse(response.expire_time))} .
         </p>
-        <Button variant="contained" style={{ margin: 5 }}>
+        <Button
+          variant="contained"
+          style={{ margin: 5 }}
+          onClick={e => this.downloadSchemeFile()}
+        >
           Download Scheme File
         </Button>
         <Button
@@ -107,7 +107,7 @@ export class AnnotationResult extends React.Component {
   renderError() {
     const id = getQueryValue("id");
     return (
-      <div style={{ color: "maroon"}}>
+      <div style={{ color: "maroon" }}>
         {id ? (
           this.state.response &&
           this.state.response.status === AnnotationStatus.ERROR ? (
@@ -138,6 +138,7 @@ export class AnnotationResult extends React.Component {
                 graph={JSON.parse(response.result)}
                 annotations={response.annotations.map(a => a.function_name)}
                 back={() => this.setState({ showVisualization: false })}
+                downloadSchemeFile={this.downloadSchemeFile}
               />
             )}
             {this.state.showVisualization || (
@@ -163,7 +164,7 @@ export class AnnotationResult extends React.Component {
                 }}
               >
                 Fetching results ...
-                <LinearProgress  style={{ width: 300, marginTop: 5 }} />
+                <LinearProgress style={{ width: 300, marginTop: 5 }} />
               </div>
             )}
           </Grid>
