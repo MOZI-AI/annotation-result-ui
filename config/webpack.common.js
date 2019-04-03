@@ -70,7 +70,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       "process.env": {
-        SERVICE_ADDR: JSON.stringify(process.env.SERVICE_ADDR)
+        SERVICE_ADDR: JSON.stringify(process.env.RESULT_ADDR)
       }
     }),
     new HtmlWebpackPlugin({
