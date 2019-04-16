@@ -1,27 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 const cytoscape = require("cytoscape");
 const cola = require("cytoscape-cola");
-import {
-  Grid,
-  FormControlLabel,
-  Checkbox,
-  IconButton,
-  Tooltip,
-  ExpansionPanel,
-  ExpansionPanelSummary,
-  ExpansionPanelDetails,
-  FormGroup
-} from "@material-ui/core";
-import {
-  Shuffle,
-  PhotoCameraOutlined,
-  FileCopyOutlined,
-  HelpOutline,
-  Share,
-  ExpandMore,
-  ChangeHistory,
-  ArrowBack
-} from "@material-ui/icons";
+import { Button, Tooltip, Collapse, Checkbox, Progress } from "antd";
 
 const AnnotationColorsLight = [
   "#c2ddf0",
@@ -312,156 +292,138 @@ export class Visualizer extends React.Component {
 
   render() {
     return (
-      <div
-        style={{
-          minHeight: "85vh"
-        }}
-      >
-        <Grid container>
-          <Grid
-            item
-            style={{
-              position: "absolute",
-              top: "15px",
-              left: "15px",
-              zIndex: 2
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                display: "flex",
-                flexDirection: "column",
-                backgroundColor: "#fff",
-                borderRadius: "5px",
-                opacity: 0.9
-              }}
+      <Fragment>
+        <div
+          style={{
+            position: "absolute",
+            display: "flex",
+            flexDirection: "column",
+            backgroundColor: "#fff",
+            borderRadius: "5px",
+            top: 15,
+            left: 15,
+            opacity: 0.9,
+            zIndex: 2
+          }}
+        >
+          <Tooltip placement="right" title="Go back">
+            <Button
               size="large"
-            >
-              <Tooltip placement="right" title="Go back">
-                <IconButton onClick={e => this.props.back()}>
-                  <ArrowBack />
-                </IconButton>
-              </Tooltip>
-              <Tooltip placement="right" title="Randomize layout">
-                <IconButton onClick={e => this.randomLayout()}>
-                  <Shuffle />
-                </IconButton>
-              </Tooltip>
-              <Tooltip placement="right" title="Breadth-first layout">
-                <IconButton onClick={e => this.breadthFirstLayout()}>
-                  <ChangeHistory />
-                </IconButton>
-              </Tooltip>
-              <Tooltip placement="right" title="Save screenshot">
-                <IconButton onClick={e => this.takeScreenshot()}>
-                  <PhotoCameraOutlined />
-                </IconButton>
-              </Tooltip>
-
-              <Tooltip placement="right" title="Download scheme file">
-                <IconButton onClick={this.props.downloadSchemeFile}>
-                  <FileCopyOutlined />
-                </IconButton>
-              </Tooltip>
-              <Tooltip placement="right" title="Download graph as JSON">
-                <IconButton onClick={e => this.downloadGraphJSON()}>
-                  <Share />
-                </IconButton>
-              </Tooltip>
-              <Tooltip
-                placement="right"
-                title={
-                  <div>
-                    <p>
-                      Use the checkboxes to the right to filter the graph by
-                      annotations.
-                    </p>
-                    <p>
-                      Click on a gene node to see annotations connected to it.
-                    </p>
-                    <p>
-                      Click on an annotation to see which genes it annotates.
-                    </p>
-                  </div>
-                }
-              >
-                <IconButton>
-                  <HelpOutline />
-                </IconButton>
-              </Tooltip>
-            </div>
-          </Grid>
-          <Grid item xs={12}>
-            <div
-              style={{
-                minHeight: "100vh"
-              }}
-              ref={this.cy_wrapper}
+              style={{ border: "none" }}
+              icon="arrow-left"
+              onClick={e => this.props.back()}
             />
-          </Grid>
-          <Grid
-            item
-            xs={10}
-            sm={4}
-            md={3}
-            style={{
-              position: "absolute",
-              top: "15px",
-              right: "15px",
-              backgroundColor: "#fff",
-              borderRadius: "5px",
-              zIndex: 2,
-              opacity: 0.9
-            }}
+          </Tooltip>
+          <Tooltip placement="right" title="Randomize layout">
+            <Button
+              size="large"
+              style={{ border: "none" }}
+              icon="swap"
+              onClick={e => this.randomLayout()}
+            />
+          </Tooltip>
+          <Tooltip placement="right" title="Breadth-first layout">
+            <Button
+              size="large"
+              style={{ border: "none" }}
+              icon="gold"
+              onClick={e => this.breadthFirstLayout()}
+            />
+          </Tooltip>
+          <Tooltip placement="right" title="Save screenshot">
+            <Button
+              size="large"
+              style={{ border: "none" }}
+              icon="camera"
+              onClick={e => this.takeScreenshot()}
+              style={{ border: "none" }}
+            />
+          </Tooltip>
+          <Tooltip placement="right" title="Download scheme file">
+            <Button
+              size="large"
+              style={{ border: "none" }}
+              icon="file-text"
+              onClick={this.props.downloadSchemeFile}
+            />
+          </Tooltip>
+          <Tooltip placement="right" title="Download graph as JSON">
+            <Button
+              size="large"
+              style={{ border: "none" }}
+              icon="share-alt"
+              onClick={e => this.downloadGraphJSON()}
+            />
+          </Tooltip>
+          <Tooltip
+            placement="right"
+            title={
+              <div>
+                <p>
+                  Use the checkboxes to the right to filter the graph by
+                  annotations.
+                </p>
+                <p>Click on a gene node to see annotations connected to it.</p>
+                <p>Click on an annotation to see which genes it annotates.</p>
+              </div>
+            }
           >
-            <ExpansionPanel style={{ width: "100%" }}>
-              <ExpansionPanelSummary expandIcon={<ExpandMore />}>
-                Annotations
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <FormGroup>
-                  {this.props.annotations.map((a, i) => (
-                    <React.Fragment key={a}>
-                      <FormControlLabel
-                        value="0"
-                        key={a}
-                        control={
-                          <Checkbox
-                            defaultChecked={i === 0}
-                            name={a.key}
-                            onChange={e =>
-                              this.toggleAnnotationVisibility(
-                                a,
-                                e.target.checked
-                              )
-                            }
-                          />
-                        }
-                        label={a}
-                      />
-                      <div
-                        style={{
-                          minHeight: "5px",
-                          width: "100%",
-                          backgroundColor: `${AnnotationColorsLight[i]}`
-                        }}
-                      >
-                        <div
-                          style={{
-                            minHeight: "5px",
-                            width: `${this.annotationPercentage(a)}%`,
-                            backgroundColor: `${AnnotationColorsDark[i]}`
-                          }}
-                        />
-                      </div>
-                    </React.Fragment>
-                  ))}
-                </FormGroup>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-          </Grid>
-        </Grid>
+            <Button
+              size="large"
+              icon="info-circle"
+              style={{ border: "none" }}
+            />
+          </Tooltip>
+        </div>
+
+        <div
+          style={{
+            height: "100vh",
+            width: "100vw"
+          }}
+          ref={this.cy_wrapper}
+        />
+        <div
+          xs={10}
+          sm={4}
+          md={3}
+          style={{
+            position: "absolute",
+            top: "15px",
+            right: "15px",
+            backgroundColor: "#fff",
+            borderRadius: "5px",
+            zIndex: 2,
+            opacity: 0.9
+          }}
+        >
+          <Collapse bordered={false} style={{ width: 300 }}>
+            <Collapse.Panel
+              header="Annotations"
+              key="annotation"
+              style={{ border: "none" }}
+            >
+              {this.props.annotations.map((a, i) => (
+                <React.Fragment key={a}>
+                  <Checkbox
+                    checked={i === 0}
+                    name={a.key}
+                    onChange={e =>
+                      this.toggleAnnotationVisibility(a, e.target.checked)
+                    }
+                    style={{ marginRight: 10 }}
+                  />
+                  {a}
+                  <Progress
+                    percent={this.annotationPercentage(a)}
+                    strokeColor={AnnotationColorsDark[i]}
+                    showInfo={false}
+                  />
+                </React.Fragment>
+              ))}
+            </Collapse.Panel>
+          </Collapse>
+        </div>
         {this.state.selectedNode.node && (
           <div
             style={{
@@ -483,7 +445,7 @@ export class Visualizer extends React.Component {
             </p>
           </div>
         )}
-      </div>
+      </Fragment>
     );
   }
 }

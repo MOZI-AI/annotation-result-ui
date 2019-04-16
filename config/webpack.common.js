@@ -14,7 +14,10 @@ module.exports = {
 
   devtool: "source-map",
   devServer: {
-    contentBase: paths.outPath
+    contentBase: paths.outPath,
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
   },
 
   module: {
@@ -37,6 +40,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.csv/,
+        use: ["csv-loader"]
       },
       {
         test: /\.less$/,

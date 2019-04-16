@@ -1,13 +1,14 @@
-import React from "react";
+import React, { Fragment } from "react";
 import logo from "../assets/mozi_globe.png";
-import { Button, Grid } from "@material-ui/core";
+import { Button, Row, Col, Spin } from "antd";
 import { Visualizer } from "./visualizer";
 import { parse, distanceInWordsToNow } from "date-fns";
-import LinearProgress from "@material-ui/core/LinearProgress";
+import { TabbedTables } from "./tabbed-tables";
+import "antd/dist/antd.css";
 
 export const SERVER_ADDRESS = process.env.SERVICE_ADDR
   ? `http://${process.env.SERVICE_ADDR}:3200`
-  : "http://localhost:3200";
+  : "http://e9f4bc29.ngrok.io";
 
 export const AnnotationStatus = {
   ACTIVE: 1,
@@ -38,9 +39,11 @@ export class AnnotationResult extends React.Component {
     this.state = {
       fetchingResult: false,
       response: undefined,
-      showVisualization: false
+      showVisualization: false,
+      showResultTable: false
     };
     this.downloadSchemeFile = this.downloadSchemeFile.bind(this);
+    this.fetchTableData = this.fetchTableData.bind(this);
   }
 
   componentDidMount() {
@@ -48,6 +51,7 @@ export class AnnotationResult extends React.Component {
     if (id) {
       this.setState({ fetchingResult: true });
       fetchAnnotationStatus(id).then(response => {
+        response.result = JSON.parse(response.result);
         this.setState({
           fetchingResult: false,
           response: response
@@ -60,6 +64,23 @@ export class AnnotationResult extends React.Component {
     window.open(`${SERVER_ADDRESS}/result_file/${getQueryValue("id")}`);
   }
 
+  downloadCSVFile(fileName) {
+    window.open(`${SERVER_ADDRESS}/csv_file/${fileName}`);
+  }
+
+  fetchTableData(fileName) {
+    fetch(`${SERVER_ADDRESS}/csv_file/${fileName}`).then(data => {
+      const response = Object.assign({}, this.state.response);
+      data
+        .clone()
+        .text()
+        .then(text => {
+          response.csv_files.find(f => f.fileName === fileName).data = text;
+          this.setState({ response: response });
+        });
+    });
+  }
+
   renderHeader() {
     return (
       <div style={{ marginTop: "20vh", marginBottom: 30 }}>
@@ -70,7 +91,7 @@ export class AnnotationResult extends React.Component {
   }
 
   renderComplete(response) {
-    const graph = JSON.parse(response.result);
+    const graph = response.result;
     return (
       <React.Fragment>
         <p>
@@ -80,16 +101,15 @@ export class AnnotationResult extends React.Component {
           This page will expire in{" "}
           {distanceInWordsToNow(parse(response.expire_time * 1000))}.
         </p>
-        <Button
-          variant="contained"
-          style={{ margin: 5 }}
-          onClick={e => this.downloadSchemeFile()}
-        >
+        <Button onClick={e => this.setState({ showResultTable: true })}>
+          View results table
+        </Button>
+        <Button style={{ margin: 10 }} onClick={e => this.downloadSchemeFile()}>
           Download Scheme File
         </Button>
+
         <Button
-          variant="contained"
-          color="primary"
+          type="primary"
           onClick={e => this.setState({ showVisualization: true })}
         >
           Visualize the result
@@ -131,44 +151,55 @@ export class AnnotationResult extends React.Component {
     const response = this.state.response || {};
     return (
       <React.Fragment>
-        <Grid container>
-          <Grid item style={{ height: "100vh", width: "100vw" }}>
-            {this.state.showVisualization && (
-              <Visualizer
-                graph={JSON.parse(response.result)}
-                annotations={response.annotations.map(a => a.function_name)}
-                back={() => this.setState({ showVisualization: false })}
-                downloadSchemeFile={this.downloadSchemeFile}
-              />
-            )}
-            {this.state.showVisualization || (
-              <div style={{ width: "100%", textAlign: "center" }}>
-                {this.renderHeader()}
-                {response.status === AnnotationStatus.COMPLETED
-                  ? this.renderComplete(response)
-                  : response.status === AnnotationStatus.ACTIVE
-                  ? this.renderActive()
-                  : this.renderError()}
-              </div>
-            )}
-            {/* Show loader if there is a request being processed */}
-            {this.state.fetchingResult && (
-              <div
-                style={{
-                  width: "100vw",
-                  textAlign: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}
-              >
-                Fetching results ...
-                <LinearProgress style={{ width: 300, marginTop: 5 }} />
-              </div>
-            )}
-          </Grid>
-        </Grid>
+        <Row>
+          <Col span={24} style={{ height: "100vh" }}>
+            <Fragment>
+              {this.state.showVisualization && (
+                <Visualizer
+                  graph={response.result}
+                  annotations={response.annotations.map(a => a.function_name)}
+                  back={() => this.setState({ showVisualization: false })}
+                  downloadSchemeFile={this.downloadSchemeFile}
+                />
+              )}
+              {this.state.showVisualization || (
+                <div style={{ width: "100%", textAlign: "center" }}>
+                  {this.renderHeader()}
+                  {response.status === AnnotationStatus.COMPLETED
+                    ? this.renderComplete(response)
+                    : response.status === AnnotationStatus.ACTIVE
+                    ? this.renderActive()
+                    : this.renderError()}
+                </div>
+              )}
+              {/* Show loader if there is a request being processed */}
+              {this.state.fetchingResult && (
+                <div
+                  style={{
+                    width: "100vw",
+                    textAlign: "center",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center"
+                  }}
+                >
+                  <Spin style={{ marginTop: 5 }} />
+                  Fetching results ...
+                </div>
+              )}
+              {this.state.showResultTable && (
+                <TabbedTables
+                  open={this.state.showResultTable}
+                  handleClose={() => this.setState({ showResultTable: false })}
+                  tables={this.state.response.csv_files}
+                  fetchTableData={this.fetchTableData}
+                  downloadCSVFile={this.downloadCSVFile}
+                />
+              )}
+            </Fragment>
+          </Col>
+        </Row>
       </React.Fragment>
     );
   }
