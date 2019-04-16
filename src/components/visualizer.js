@@ -144,6 +144,12 @@ export class Visualizer extends React.Component {
     this.layout.run();
   }
 
+  concentricLayout() {
+    if (this.layout) this.layout.stop();
+    this.layout = this.cy.layout({ name: "concentric" });
+    this.layout.run();
+  }
+
   takeScreenshot() {
     const image = this.cy.jpg();
     const link = document.createElement("a");
@@ -328,6 +334,14 @@ export class Visualizer extends React.Component {
               style={{ border: "none" }}
               icon="gold"
               onClick={e => this.breadthFirstLayout()}
+            />
+          </Tooltip>
+          <Tooltip placement="right" title="Concentric layout">
+            <Button
+              size="large"
+              style={{ border: "none" }}
+              icon="play-circle"
+              onClick={e => this.concentricLayout()}
             />
           </Tooltip>
           <Tooltip placement="right" title="Save screenshot">
