@@ -8,7 +8,7 @@ import "antd/dist/antd.css";
 
 export const SERVER_ADDRESS = process.env.SERVICE_ADDR
   ? `http://${process.env.SERVICE_ADDR}:3200`
-  : "http://e9f4bc29.ngrok.io";
+  : "http://localhost:3200";
 
 export const AnnotationStatus = {
   ACTIVE: 1,
