@@ -7,8 +7,8 @@ import { TabbedTables } from "./tabbed-tables";
 import "antd/dist/antd.css";
 
 export const SERVER_ADDRESS = process.env.SERVICE_ADDR
-  ? `http://${process.env.SERVICE_ADDR}:3004`
-  : "http://localhost:3004";
+  ? `http://${process.env.SERVICE_ADDR}:3002`
+  : "http://localhost:3002";
 
 export const AnnotationStatus = {
   ACTIVE: 1,
