@@ -127,7 +127,8 @@ export class Visualizer extends React.Component {
     super(props);
     this.state = {
       selectedNode: { node: null, position: null },
-      history: []
+      history: [],
+      visibleAnn: []
     };
     this.cy_wrapper = React.createRef();
     cytoscape.use(cola);
@@ -173,33 +174,24 @@ export class Visualizer extends React.Component {
   }
 
   registerEventListeners() {
+    let my = this;
     this.cy.nodes().on(
-      "mouseover",
+      "select",
       function(event) {
-        this.setState({
+        my.setState({
           selectedNode: {
             node: event.target.data(),
             position: event.renderedPosition
           }
         });
-      }.bind(this)
-    );
-    this.cy.nodes().on(
-      "select",
-      function(event) {
-        this.focusOnNode(event.target.data().id);
-      }.bind(this)
-    );
-    this.cy.nodes().on(
-      "mouseout",
-      function(event) {
-        this.setState({ selectedNode: { node: null, position: null } });
+        my.focusOnNode(event.target.data().id);
       }.bind(this)
     );
     this.cy.nodes().on(
       "unselect",
       function(event) {
-        this.removeFocus();
+        this.setState({ selectedNode: { node: null, position: null } });
+        my.removeFocus();
       }.bind(this)
     );
   }
@@ -255,8 +247,8 @@ export class Visualizer extends React.Component {
   }
 
   toggleAnnotationVisibility(annotation, show) {
-    show
-      ? this.cy.batch(() => {
+      if(show){
+         this.cy.batch(() => {
           this.cy.add(
             this.props.graph.nodes.filter(
               e => e.data.group === annotation && e.data.id
@@ -267,8 +259,22 @@ export class Visualizer extends React.Component {
               e => e.data.group === annotation && e.data.source && e.data.target
             )
           );
-        })
-      : this.cy.remove(`[group='${annotation}']`);
+        });
+
+        let updatedArr = [...this.state.visibleAnn, annotation];
+
+        this.setState({
+            visibleAnn: updatedArr
+        });
+      }
+      else{
+          let updatedArr = [...this.state.visibleAnn].filter(a => a !== annotation);
+          this.setState({
+              visibleAnn: updatedArr
+          });
+          this.cy.remove(`[group='${annotation}']`);
+      }
+
     this.randomLayout();
     this.registerEventListeners();
   }
@@ -420,7 +426,7 @@ export class Visualizer extends React.Component {
               {this.props.annotations.map((a, i) => (
                 <React.Fragment key={a}>
                   <Checkbox
-                    checked={i === 0}
+                    checked={this.state.visibleAnn.includes(a)}
                     name={a.key}
                     onChange={e =>
                       this.toggleAnnotationVisibility(a, e.target.checked)
