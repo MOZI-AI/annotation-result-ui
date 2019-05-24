@@ -1,4 +1,4 @@
-### Result page for SingularityNET's moses service ###
+### Result page for SingularityNET's Annotation Service ###
 
 This application helps track the progress of a particular moses analysis and download the result once it is completed. The particular analysis run is identified by an ID that is passed as part of the URL. 
 
