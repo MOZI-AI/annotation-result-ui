@@ -184,14 +184,14 @@ export class Visualizer extends React.Component {
             position: event.renderedPosition
           }
         });
-        my.focusOnNode(event.target.data().id);
+        // my.focusOnNode(event.target.data().id);
       }.bind(this)
     );
     this.cy.nodes().on(
       "unselect",
       function(event) {
         this.setState({ selectedNode: { node: null, position: null } });
-        my.removeFocus();
+        // my.removeFocus();
       }.bind(this)
     );
   }
