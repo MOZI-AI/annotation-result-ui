@@ -237,8 +237,12 @@ export class Visualizer extends React.Component {
   }
 
   downloadGraphJSON() {
+    let exportJson = {
+      data: {name: "Annotation Service Export"},
+      elements: this.cy.json().elements
+    };
     const json = `data:text/json;charset=utf-8, ${encodeURIComponent(
-      JSON.stringify(this.props.graph)
+      JSON.stringify(exportJson)
     )}`;
     const link = document.createElement("a");
     link.setAttribute("href", json);
