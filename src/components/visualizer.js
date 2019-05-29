@@ -191,15 +191,41 @@ export class Visualizer extends React.Component {
       "unselect",
       function(event) {
         this.setState({ selectedNode: { node: null, position: null } });
-        // my.removeFocus();
+        my.removeFocus(event.target.data().id);
       }.bind(this)
     );
+
+    let tappedBefore;
+    let tappedTimeout;
+
+    this.cy.nodes().on("tap", function (evt) {
+        let tappedNow = evt.target;
+        if(tappedTimeout && tappedBefore){
+          clearTimeout(tappedTimeout);
+        }
+        if(tappedBefore === tappedNow){
+          tappedNow.trigger("doubleTap", evt);
+          tappedBefore = null;
+        }
+        else{
+          tappedTimeout = setTimeout(() => {tappedBefore = null}, 300);
+          tappedBefore = tappedNow;
+        }
+    });
+    this.cy.nodes().on("doubleTap" ,function (evt) {
+      let id = evt.target.data().id;
+      my.focusOnNode(id);
+    })
   }
 
-  removeFocus() {
+  removeFocus(id) {
     this.cy.batch(() => {
-      this.cy.elements().style({ opacity: 1 });
+      this.cy.elements().style({ opacity: 1});
     });
+    this.cy.zoom({
+          level: 1,
+          position: this.cy.getElementById(id).position()
+      });
   }
 
   assignColorToAnnotations() {
