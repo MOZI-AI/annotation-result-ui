@@ -127,6 +127,7 @@ export class Visualizer extends React.Component {
     super(props);
     this.state = {
       selectedNode: { node: null, position: null },
+      selectedEdge: {pubmed: null, position: null},
       history: [],
       visibleAnn: []
     };
@@ -193,6 +194,23 @@ export class Visualizer extends React.Component {
         this.setState({ selectedNode: { node: null, position: null } });
         my.removeFocus(event.target.data().id);
       }.bind(this)
+    );
+
+    this.cy.on("select", "edge", function (event) {
+        let pubMedId = event.target.data().pubmedId;
+        if(pubMedId !== "") {
+          this.setState({selectedEdge: {
+              pubmed: pubMedId,
+              position: event.renderedPosition
+          }}
+          )
+        }
+      }.bind(this)
+    );
+
+    this.cy.on("unselect", "edge" , function (event) {
+        this.setState({ selectedEdge: { pubmed: null, position: null } });
+    }.bind(this)
     );
 
     let tappedBefore;
@@ -492,6 +510,25 @@ export class Visualizer extends React.Component {
             } )`}</h4>
             <p>
               {this.formatDescription(this.state.selectedNode.node.definition)}
+            </p>
+          </div>
+        )}
+        {this.state.selectedEdge.pubmed && (
+          <div
+            style={{
+              position: "absolute",
+              bottom: 15,
+              left: 15,
+              width: "350px",
+              backgroundColor: "#c9e1f9",
+              border: "solid 1px #87BEF5",
+              padding: "5px",
+              borderRadius: "3px"
+            }}
+          >
+            <h4>PubMed Id</h4>
+            <p>
+              {this.formatDescription(this.state.selectedEdge.pubmed)}
             </p>
           </div>
         )}
