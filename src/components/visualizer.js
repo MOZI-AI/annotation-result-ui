@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 const cytoscape = require("cytoscape");
 const cola = require("cytoscape-cola");
 import { Button, Tooltip, Collapse, Checkbox, Progress } from "antd";
-
+import {getQueryValue}  from "./annotation-result"
 const AnnotationColorsLight = [
   "#c2ddf0",
   "#d2cfe2",
@@ -285,12 +285,11 @@ export class Visualizer extends React.Component {
       data: {name: "Annotation Service Export"},
       elements: this.cy.json().elements
     };
-    const json = `data:text/json;charset=utf-8, ${encodeURIComponent(
-      JSON.stringify(exportJson)
-    )}`;
+    let json = JSON.stringify(exportJson);
     const link = document.createElement("a");
-    link.setAttribute("href", json);
-    link.setAttribute("download", "annotation-graph.json");
+    let file = new Blob([json], {type: "text/json"});
+    link.href = URL.createObjectURL(file);
+    link.download =  `annotation-graph-${getQueryValue("id")}.json`;
     link.click();
   }
 
