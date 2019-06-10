@@ -5,13 +5,11 @@ import {Visualizer} from "./visualizer";
 import {parse, distanceInWordsToNow} from "date-fns";
 import {TabbedTables} from "./tabbed-tables";
 import "antd/dist/antd.css";
-import {Redirect} from "react-router-dom"
 
-// export const SERVER_ADDRESS = process.env.SERVICE_ADDR
-//   ? `http://${process.env.SERVICE_ADDR}:3002`
-//   : "http://localhost:3002";
+export const SERVER_ADDRESS = process.env.SERVICE_ADDR
+  ? `http://${process.env.SERVICE_ADDR}:3002`
+  : "http://localhost:3002";
 
-export const SERVER_ADDRESS = "http://mozi.ai:3002";
 const Search = Input.Search;
 export const AnnotationStatus = {
     ACTIVE: 1,
