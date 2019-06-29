@@ -1,8 +1,11 @@
 import React, { Fragment } from "react";
 const cytoscape = require("cytoscape");
 const cola = require("cytoscape-cola");
-import { Button, Tooltip, Collapse, Checkbox, Progress } from "antd";
+import { Button, Tooltip, Collapse, Checkbox, Progress, Tree} from "antd";
 import {getQueryValue}  from "./annotation-result"
+
+const {TreeNode} = Tree;
+
 const AnnotationColorsLight = [
   "#c2ddf0",
   "#d2cfe2",
@@ -33,6 +36,8 @@ export const CYTOSCAPE_COLA_CONFIG = {
   nodeSpacing: 20,
   infinite: false
 };
+
+export const sample_annts = [{"name" : "gene-go-annotation", "subgroups":["cellular_component", "molecular_function", "biological_process"]},{"name" : "gene-pathway-annotation", "subgroups":["Uniprot", "ChEBI"]},{"name" : "biogrid-interaction-annotation", "subgroups":[]}];
 
 export const CYTOSCAPE_STYLE = [
   {
@@ -123,6 +128,7 @@ export const CYTOSCAPE_STYLE = [
 ];
 
 export class Visualizer extends React.Component {
+    filteredElms;
   constructor(props) {
     super(props);
     this.state = {
@@ -133,6 +139,7 @@ export class Visualizer extends React.Component {
     };
     this.cy_wrapper = React.createRef();
     cytoscape.use(cola);
+    this.nodeChecked = this.nodeChecked.bind(this);
   }
 
   randomLayout() {
@@ -168,7 +175,7 @@ export class Visualizer extends React.Component {
     this.cy.add(
       this.props.graph.nodes.filter(n => n.data.group === "main" && n.data.id)
     );
-    this.toggleAnnotationVisibility(this.props.annotations[0], true);
+    this.toggleAnnotationVisibility(this.props.annotations[2], true);
     this.cy.style(CYTOSCAPE_STYLE.concat(this.assignColorToAnnotations()));
     this.registerEventListeners();
     this.randomLayout();
@@ -249,7 +256,7 @@ export class Visualizer extends React.Component {
   assignColorToAnnotations() {
     return this.props.annotations.reduce((acc, ann, i, arr) => {
       acc.push({
-        selector: 'edge[group="' + ann + '"]',
+        selector: 'edge[group="' + ann.name + '"]',
         style: {
           "line-color": AnnotationColorsLight[i],
           "text-outline-color": AnnotationColorsLight[i],
@@ -257,7 +264,7 @@ export class Visualizer extends React.Component {
         }
       });
       acc.push({
-        selector: 'node[group="' + ann + '"]',
+        selector: 'node[group="' + ann.name + '"]',
         style: {
           "background-color": AnnotationColorsDark[i],
           color: "#fff",
@@ -292,7 +299,64 @@ export class Visualizer extends React.Component {
     link.download =  `annotation-graph-${getQueryValue("id")}.json`;
     link.click();
   }
+  nodeChecked(keys, info) {
+    console.log("keys", keys);
+    console.log("info", info);
+    const node = info.node.props;
 
+    if(this.props.annotations.includes(node.title)){
+      if(info.checked){
+           this.cy.batch(() => {
+          this.cy.add(
+            this.props.graph.nodes.filter(
+              e => e.data.group === node.title && e.data.id
+            )
+          );
+          this.cy.add(
+            this.props.graph.edges.filter(
+                e => e.data.group === node.title && e.data.source && e.data.target
+            )
+          );
+        });
+
+        let updatedArr = [...this.state.visibleAnn, node.title];
+
+        this.setState({
+            visibleAnn: updatedArr
+        });
+      }
+      else {
+         let updatedArr = [...this.state.visibleAnn].filter(a => a !== node.title);
+          this.setState({
+              visibleAnn: updatedArr
+          });
+          this.filteredElms = this.cy.remove(`[group='${node.title}']`);
+      }
+    }
+    else {
+      if(info.checked){
+        if(this.filteredElms){
+          this.filteredElms.restore();
+        }
+
+        let updatedArr = [...this.state.visibleAnn, node.title];
+
+        this.setState({
+            visibleAnn: updatedArr
+        });
+      }
+      else {
+         let updatedArr = [...this.state.visibleAnn].filter(a => a !== node.title);
+          this.setState({
+              visibleAnn: updatedArr
+          });
+          this.filteredElms =  this.cy.remove(`[subgroup='${node.title}']`);
+      }
+    }
+    this.randomLayout();
+    this.registerEventListeners();
+
+  }
   toggleAnnotationVisibility(annotation, show) {
       if(show){
          this.cy.batch(() => {
@@ -470,26 +534,24 @@ export class Visualizer extends React.Component {
               key="annotation"
               style={{ border: "none" }}
             >
-              {this.props.annotations.map((a, i) => (
-                <React.Fragment key={a}>
-                  <Checkbox
-                    checked={this.state.visibleAnn.includes(a)}
-                    name={a.key}
-                    onChange={e =>
-                      this.toggleAnnotationVisibility(a, e.target.checked)
-                    }
-                    style={{ marginRight: 10 }}
-                  />
-                  {a}
-                  <Progress
-                    percent={this.annotationPercentage(a)}
-                    strokeColor={AnnotationColorsDark[i]}
-                    showInfo={false}
-                  />
-                </React.Fragment>
-              ))}
+              {this.props.annotations.map((a, i) => {
+                  return (
+                      <Tree key={i} checkable
+                        defaultCheckedKeys={[this.props.annotations[2]]}
+                        onCheck={this.nodeChecked}
+                        >
+                        <TreeNode key={a} title={a}>
+                          {sample_annts.filter((e)=> e.name === a)[0].subgroups.map(sub => {
+                            return (
+                                <TreeNode title={sub} key={sub}></TreeNode>
+                            )
+                          })}
+                        </TreeNode>
+                      </Tree>
+                  )
+              })}
             </Collapse.Panel>
-          </Collapse>
+            </Collapse>
         </div>
         {this.state.selectedNode.node && (
           <div
@@ -534,4 +596,4 @@ export class Visualizer extends React.Component {
       </Fragment>
     );
   }
-}
+};
