@@ -37,7 +37,7 @@ export const CYTOSCAPE_COLA_CONFIG = {
   infinite: false
 };
 
-export const sample_annts = [{"name" : "gene-go-annotation", "subgroups":["cellular_component", "molecular_function", "biological_process"]},{"name" : "gene-pathway-annotation", "subgroups":["Uniprot", "ChEBI"]},{"name" : "biogrid-interaction-annotation", "subgroups":[]}];
+export const sample_annts = [{"name" : "gene-go-annotation", "subgroups":["cellular_component", "molecular_function", "biological_process"]},{"name" : "gene-pathway-annotation", "subgroups":["Uniprot", "ChEBI"]},{"name" : "biogrid-interaction-annotation", "subgroups":["Genes"]}];
 
 export const CYTOSCAPE_STYLE = [
   {
@@ -335,9 +335,22 @@ export class Visualizer extends React.Component {
     }
     else {
       if(info.checked){
-        if(this.filteredElms){
-          this.filteredElms.restore();
-        }
+        var edges = this.filteredElms.edges().filter(
+                e => e.connectedNodes().filter(n => n.data.subgroup === node.title).length === 0
+            );
+        this.cy.batch(() => {
+          this.cy.add(
+            this.props.graph.nodes.filter(
+              e => e.data.subgroup === node.title && e.data.id
+            )
+          );
+          this.cy.add(
+            /*this.props.graph.edges.filter(
+                e => e.data.subgroup === node.title && e.data.source && e.data.target
+            )*/
+            edges
+          );
+        });
 
         let updatedArr = [...this.state.visibleAnn, node.title];
 
@@ -537,7 +550,7 @@ export class Visualizer extends React.Component {
               {this.props.annotations.map((a, i) => {
                   return (
                       <Tree key={i} checkable
-                        defaultCheckedKeys={[this.props.annotations[2]]}
+                        defaultCheckedKeys={[this.props.annotations[0]]}
                         onCheck={this.nodeChecked}
                         >
                         <TreeNode key={a} title={a}>

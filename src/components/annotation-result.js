@@ -10,7 +10,2821 @@ import "antd/dist/antd.css";
 //   ? `http://${process.env.SERVICE_ADDR}:3002`
 //   : "http://localhost:3002";
 export const annts = ["gene-go-annotation","gene-pathway-annotation", "biogrid-interaction-annotation"];
-export const sample_graph = {"nodes" : [{"data" : {"id" : "ChEBI:15422","name" : "({[({[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy](hydroxy)phosphoryl}oxy)phosphonic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=15422","location" : "endoplasmic reticulum lumen,mitochondrial matrix,plasma membrane,extracellular region,peroxisomal matrix,cilium,cytosol,nucleoplasm,mitochondrial intermembrane space,endoplasmic reticulum membrane,platelet dense granule lumen","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:16761","name" : "[({[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy]phosphonic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=16761","location" : "cilium,mitochondrial matrix,mitochondrial intermembrane space,cytosol,endoplasmic reticulum lumen,nucleoplasm,plasma membrane,endoplasmic reticulum membrane,platelet dense granule lumen,extracellular region","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9Y6K9","name" : "Ub-285-IKBKG","definition" : "https://www.uniprot.org/uniprot/Q9Y6K9","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P41279","name" : "MAP3K8","definition" : "https://www.uniprot.org/uniprot/P41279","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P45985","name" : "MAP2K4","definition" : "https://www.uniprot.org/uniprot/P45985","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P0CG48","name" : "N6-glycyl-L-lysine-UBC(229-304)","definition" : "https://www.uniprot.org/uniprot/P0CG48","location" : "nucleoplasm,mitochondrial outer membrane,endoplasmic reticulum membrane,endocytic vesicle membrane,endosome membrane,plasma membrane,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9Y297","name" : "BTRC","definition" : "https://www.uniprot.org/uniprot/Q9Y297","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P19838","name" : "NFKB1(1-968)","definition" : "https://www.uniprot.org/uniprot/P19838","location" : "secretory granule lumen,nucleoplasm,extracellular region,specific granule lumen,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q02750","name" : "Dual specificity mitogen-activated protein kinase kinase 1","definition" : "https://www.uniprot.org/uniprot/Q02750","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q8NFZ5","name" : "TNIP2","definition" : "https://www.uniprot.org/uniprot/Q8NFZ5","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9UKB1","name" : "FBXW11","definition" : "https://www.uniprot.org/uniprot/Q9UKB1","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P62987","name" : "N6-glycyl-L-lysine-UBA52(1-76)","definition" : "https://www.uniprot.org/uniprot/P62987","location" : "endocytic vesicle membrane,cytosol,endosome membrane,plasma membrane,nucleoplasm,endoplasmic reticulum membrane,mitochondrial outer membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P0CG47","name" : "adenylatedG76-UBB(1-76)","definition" : "https://www.uniprot.org/uniprot/P0CG47","location" : "plasma membrane,cytosol,endosome membrane,nucleoplasm,endoplasmic reticulum membrane,endocytic vesicle membrane,mitochondrial outer membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P63208","name" : "SKP1","definition" : "https://www.uniprot.org/uniprot/P63208","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P62979","name" : "N6-glycyl-L-lysine-RPS27A(1-76)","definition" : "https://www.uniprot.org/uniprot/P62979","location" : "endosome membrane,mitochondrial outer membrane,endocytic vesicle membrane,plasma membrane,endoplasmic reticulum membrane,nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q13616","name" : "CUL1","definition" : "https://www.uniprot.org/uniprot/Q13616","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:15996","name" : "({[({[(2R,3S,4R,5R)-5-(2-amino-6-oxo-6,9-dihydro-1H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy](hydroxy)phosphoryl}oxy)phosphonic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=15996","location" : "early endosome membrane,Golgi membrane,endocytic vesicle lumen,cytosol,nucleoplasm,ER to Golgi transport vesicle membrane,lysosomal membrane,Golgi lumen,cytoplasmic vesicle membrane,extracellular region,cilium,platelet dense granule lumen,mitochondrial matrix","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:15422","name" : "({[({[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy](hydroxy)phosphoryl}oxy)phosphonic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=15422","location" : "endoplasmic reticulum lumen,mitochondrial matrix,plasma membrane,extracellular region,peroxisomal matrix,cilium,cytosol,nucleoplasm,mitochondrial intermembrane space,endoplasmic reticulum membrane,platelet dense granule lumen","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:16761","name" : "[({[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy]phosphonic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=16761","location" : "cilium,mitochondrial matrix,mitochondrial intermembrane space,cytosol,endoplasmic reticulum lumen,nucleoplasm,plasma membrane,endoplasmic reticulum membrane,platelet dense granule lumen,extracellular region","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:17552","name" : "[({[(2R,3S,4R,5R)-5-(2-amino-6-oxo-6,9-dihydro-1H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy]phosphonic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=17552","location" : "platelet dense granule lumen,nucleoplasm,mitochondrial matrix,lysosomal membrane,cytoplasmic vesicle membrane,endoplasmic reticulum lumen,endocytic vesicle lumen,extracellular region,Golgi lumen,cilium,cytosol,plasma membrane","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q13094","name" : "Lymphocyte cytosolic protein 2","definition" : "https://www.uniprot.org/uniprot/Q13094","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P16885","name" : "p-Y-PLCG2","definition" : "https://www.uniprot.org/uniprot/P16885","location" : "plasma membrane,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P63000","name" : "GGC-PalmC-RAC1","definition" : "https://www.uniprot.org/uniprot/P63000","location" : "cytosol,ficolin-1-rich granule membrane,endoplasmic reticulum membrane,plasma membrane,secretory granule membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01706","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01706","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P06310","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P06310","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01704","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01704","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P04211","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P04211","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01615","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01615","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV61","name" : "IGLV4-3(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV61","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q6PIL0","name" : "IGHV7-81(1-?)","definition" : "https://www.uniprot.org/uniprot/Q6PIL0","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P19174","name" : "1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase gamma-1","definition" : "https://www.uniprot.org/uniprot/P19174","location" : "cytosol,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV64","name" : "IGLV3-16(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV64","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P53779","name" : "MAPK10","definition" : "https://www.uniprot.org/uniprot/P53779","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01614","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01614","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P06315","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P06315","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01597","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01597","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01764","name" : "IgH","definition" : "https://www.uniprot.org/uniprot/P01764","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01624","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01624","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01619","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01619","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV66","name" : "IGLV2-33(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV66","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01721","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01721","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01834","name" : "IGKC","definition" : "https://www.uniprot.org/uniprot/P01834","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P04430","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P04430","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01742","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01742","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV83","name" : "IGLV7-46(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV83","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01112","name" : "G12V","definition" : "https://www.uniprot.org/uniprot/P01112","location" : "plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9UKW4","name" : "VAV3","definition" : "https://www.uniprot.org/uniprot/Q9UKW4","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01817","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01817","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P04432","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P04432","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV87","name" : "IGLV11-55(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV87","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01718","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01718","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:A0A0C4DH73","name" : "IGKV1-12","definition" : "https://www.uniprot.org/uniprot/A0A0C4DH73","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV90","name" : "IGLV3-25(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV90","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P15498","name" : "p-Y174-VAV1","definition" : "https://www.uniprot.org/uniprot/P15498","location" : "cytosol,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P30273","name" : "FCER1G","definition" : "https://www.uniprot.org/uniprot/P30273","location" : "ficolin-1-rich granule membrane,plasma membrane,tertiary granule membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV81","name" : "IGLV1-44(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV81","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01709","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01709","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01601","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01601","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P12319","name" : "High affinity immunoglobulin epsilon receptor subunit alpha","definition" : "https://www.uniprot.org/uniprot/P12319","location" : "plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01714","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01714","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01825","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01825","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q13153","name" : "PAK1","definition" : "https://www.uniprot.org/uniprot/Q13153","location" : "cytosol,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P43405","name" : "p-6Y-SYK","definition" : "https://www.uniprot.org/uniprot/P43405","location" : "plasma membrane,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01100","name" : "FOS","definition" : "https://www.uniprot.org/uniprot/P01100","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01699","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01699","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV80","name" : "IGLV7-43(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV80","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV65","name" : "IGLV2-18(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV65","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01111","name" : "G12S","definition" : "https://www.uniprot.org/uniprot/P01111","location" : "plasma membrane,tertiary granule membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O75791","name" : "GRAP2","definition" : "https://www.uniprot.org/uniprot/O75791","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01743","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01743","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV82","name" : "IGLV5-45(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV82","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV91","name" : "IGLV3-27(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV91","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:A0A075B6S6","name" : "IGKV2D-30","definition" : "https://www.uniprot.org/uniprot/A0A075B6S6","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P06331","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P06331","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV92","name" : "IGLV4-69(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV92","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q13233","name" : "MAP3K1","definition" : "https://www.uniprot.org/uniprot/Q13233","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01780","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01780","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01772","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01772","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV86","name" : "IGLV10-54(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV86","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01703","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01703","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O14733","name" : "MAP2K7(2-?)","definition" : "https://www.uniprot.org/uniprot/O14733","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01767","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01767","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01593","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01593","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01602","name" : "IGKV1-5(23-?)","definition" : "https://www.uniprot.org/uniprot/P01602","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P52735","name" : "p-Y172-VAV2","definition" : "https://www.uniprot.org/uniprot/P52735","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV79","name" : "IGLV4-60(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV79","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:A0M8Q6","name" : "IGLC7","definition" : "https://www.uniprot.org/uniprot/A0M8Q6","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV68","name" : "IGLV5-37(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV68","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P04433","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P04433","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01715","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01715","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV85","name" : "IGLV3-12(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV85","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV84","name" : "IGLV2-11(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV84","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:A2NXD2","name" : "IGLV(23-?)","definition" : "https://www.uniprot.org/uniprot/A2NXD2","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01782","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01782","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01814","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01814","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01854","name" : "Ig epsilon chain C region","definition" : "https://www.uniprot.org/uniprot/P01854","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P29353-2","name" : "p-Y317-SHC1-2","definition" : "https://www.uniprot.org/uniprot/P29353-2","location" : "plasma membrane,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01594","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01594","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:A0A0C4DH25","name" : "IGKV3D-20","definition" : "https://www.uniprot.org/uniprot/A0A0C4DH25","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01599","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01599","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV69","name" : "IGLV1-40(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV69","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01763","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01763","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P0CF74","name" : "IGLC6","definition" : "https://www.uniprot.org/uniprot/P0CF74","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q13177","name" : "PAK2","definition" : "https://www.uniprot.org/uniprot/Q13177","location" : "cytosol,nucleoplasm,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:A2KUC3","name" : "IGHV(1-?)","definition" : "https://www.uniprot.org/uniprot/A2KUC3","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P06312","name" : "IGKV4-1(21-?)","definition" : "https://www.uniprot.org/uniprot/P06312","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV75","name" : "IGLV3-22(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV75","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01611","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01611","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P07948","name" : "MyrG2-PalmC3-LYN","definition" : "https://www.uniprot.org/uniprot/P07948","location" : "plasma membrane,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P80748","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P80748","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV89","name" : "IGLV2-23(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV89","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV67","name" : "IGLV1-36(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV67","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01762","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01762","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:A0A075B6P5","name" : "IGKV2-28","definition" : "https://www.uniprot.org/uniprot/A0A075B6P5","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01768","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01768","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01824","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01824","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P0CG04","name" : "IGLC1","definition" : "https://www.uniprot.org/uniprot/P0CG04","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q07889","name" : "p-4S-SOS1","definition" : "https://www.uniprot.org/uniprot/Q07889","location" : "cytosol,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01701","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01701","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01717","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01717","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P62993-1","name" : "GRB2-1","definition" : "https://www.uniprot.org/uniprot/P62993-1","location" : "cytosol,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P23083","name" : "IGHV1-2","definition" : "https://www.uniprot.org/uniprot/P23083","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01116","name" : "G12V","definition" : "https://www.uniprot.org/uniprot/P01116","location" : "plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P05412","name" : "Transcription factor AP-1","definition" : "https://www.uniprot.org/uniprot/P05412","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P45983","name" : "Mitogen-activated protein kinase 8","definition" : "https://www.uniprot.org/uniprot/P45983","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O43561-2","name" : "p-5Y-LAT-2","definition" : "https://www.uniprot.org/uniprot/O43561-2","location" : "plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01705","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01705","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q5NV62","name" : "IGLV8-61(1-?)","definition" : "https://www.uniprot.org/uniprot/Q5NV62","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:A2NJV5","name" : "IGKVA18(21-?)","definition" : "https://www.uniprot.org/uniprot/A2NJV5","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01700","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01700","location" : "plasma membrane,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P45985","name" : "MAP2K4","definition" : "https://www.uniprot.org/uniprot/P45985","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01766","name" : "Ig","definition" : "https://www.uniprot.org/uniprot/P01766","location" : "extracellular region,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P45984","name" : "MAPK9","definition" : "https://www.uniprot.org/uniprot/P45984","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:15422","name" : "({[({[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy](hydroxy)phosphoryl}oxy)phosphonic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=15422","location" : "endoplasmic reticulum lumen,mitochondrial matrix,plasma membrane,extracellular region,peroxisomal matrix,cilium,cytosol,nucleoplasm,mitochondrial intermembrane space,endoplasmic reticulum membrane,platelet dense granule lumen","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:59414","name" : "MDP ","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59414","location" : "cytosol","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:16761","name" : "[({[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy]phosphonic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=16761","location" : "cilium,mitochondrial matrix,mitochondrial intermembrane space,cytosol,endoplasmic reticulum lumen,nucleoplasm,plasma membrane,endoplasmic reticulum membrane,platelet dense granule lumen,extracellular region","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:59271","name" : "iE-DAP ","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59271","location" : "cytosol","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P0CG47","name" : "adenylatedG76-UBB(1-76)","definition" : "https://www.uniprot.org/uniprot/P0CG47","location" : "plasma membrane,cytosol,endosome membrane,nucleoplasm,endoplasmic reticulum membrane,endocytic vesicle membrane,mitochondrial outer membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9Y6K9","name" : "Ub-285-IKBKG","definition" : "https://www.uniprot.org/uniprot/Q9Y6K9","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P61088","name" : "Ub-C87-UBE2N","definition" : "https://www.uniprot.org/uniprot/P61088","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q8N5C8","name" : "TGF-beta-activated kinase 1 and MAP3K7-binding protein 3","definition" : "https://www.uniprot.org/uniprot/Q8N5C8","location" : "endosome membrane,cytosol,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9HC29","name" : "NOD2","definition" : "https://www.uniprot.org/uniprot/Q9HC29","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O43318","name" : "PolyUb-MAP3K7","definition" : "https://www.uniprot.org/uniprot/O43318","location" : "cytosol,endosome membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P45984","name" : "MAPK9","definition" : "https://www.uniprot.org/uniprot/P45984","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P53779","name" : "MAPK10","definition" : "https://www.uniprot.org/uniprot/P53779","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q15750","name" : "TAB1","definition" : "https://www.uniprot.org/uniprot/Q15750","location" : "endosome membrane,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P62987","name" : "N6-glycyl-L-lysine-UBA52(1-76)","definition" : "https://www.uniprot.org/uniprot/P62987","location" : "endocytic vesicle membrane,cytosol,endosome membrane,plasma membrane,nucleoplasm,endoplasmic reticulum membrane,mitochondrial outer membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O14733","name" : "MAP2K7(2-?)","definition" : "https://www.uniprot.org/uniprot/O14733","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O43353","name" : "Receptor-interacting serine/threonine-protein kinase 2","definition" : "https://www.uniprot.org/uniprot/O43353","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9NYJ8","name" : "TGF-beta-activated kinase 1 and MAP3K7-binding protein 2","definition" : "https://www.uniprot.org/uniprot/Q9NYJ8","location" : "endosome membrane,plasma membrane,cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P45983","name" : "Mitogen-activated protein kinase 8","definition" : "https://www.uniprot.org/uniprot/P45983","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P45985","name" : "MAP2K4","definition" : "https://www.uniprot.org/uniprot/P45985","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9Y239","name" : "NOD1","definition" : "https://www.uniprot.org/uniprot/Q9Y239","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P0CG48","name" : "N6-glycyl-L-lysine-UBC(229-304)","definition" : "https://www.uniprot.org/uniprot/P0CG48","location" : "nucleoplasm,mitochondrial outer membrane,endoplasmic reticulum membrane,endocytic vesicle membrane,endosome membrane,plasma membrane,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q13404","name" : "UBE2V1","definition" : "https://www.uniprot.org/uniprot/Q13404","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O43187","name" : "p-IRAK2","definition" : "https://www.uniprot.org/uniprot/O43187","location" : "endosome membrane,plasma membrane,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9Y4K3","name" : "K63polyUb-TRAF6","definition" : "https://www.uniprot.org/uniprot/Q9Y4K3","location" : "cytosol,plasma membrane,endosome membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P62979","name" : "N6-glycyl-L-lysine-RPS27A(1-76)","definition" : "https://www.uniprot.org/uniprot/P62979","location" : "endosome membrane,mitochondrial outer membrane,endocytic vesicle membrane,plasma membrane,endoplasmic reticulum membrane,nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:15422","name" : "({[({[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy](hydroxy)phosphoryl}oxy)phosphonic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=15422","location" : "endoplasmic reticulum lumen,mitochondrial matrix,plasma membrane,extracellular region,peroxisomal matrix,cilium,cytosol,nucleoplasm,mitochondrial intermembrane space,endoplasmic reticulum membrane,platelet dense granule lumen","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:16761","name" : "[({[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy]phosphonic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=16761","location" : "cilium,mitochondrial matrix,mitochondrial intermembrane space,cytosol,endoplasmic reticulum lumen,nucleoplasm,plasma membrane,endoplasmic reticulum membrane,platelet dense granule lumen,extracellular region","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:30915","name" : "2-oxopentanedioic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=30915","location" : "extracellular region,mitochondrial matrix,endoplasmic reticulum lumen,peroxisomal matrix","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:26523","name" : "ROS ","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=26523","location" : "cytosol,nucleoplasm","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:16680","name" : "AdoHcy ","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=16680","location" : "nucleoplasm,mitochondrial matrix,cytoplasm,cytosol","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:15741","name" : "butanedioic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=15741","location" : "peroxisomal matrix,endoplasmic reticulum lumen,mitochondrial matrix,extracellular region,cytoplasm","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:15414","name" : "[(3S)-3-amino-3-carboxypropyl]({[(2S,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methyl})methylsulfanium","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=15414","location" : "cytoplasm,mitochondrial matrix,cytosol,nucleoplasm","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:18248","name" : "\\u03bb\\u00b2-iron(2+) ion","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=18248","location" : "cytosol","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q93079","name" : "AcK21-HIST1H2BH","definition" : "https://www.uniprot.org/uniprot/Q93079","location" : "extracellular region,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q8N257","name" : "AcK16-HIST3H2BB","definition" : "https://www.uniprot.org/uniprot/Q8N257","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q93077","name" : "Ack6-HIST1H2AC","definition" : "https://www.uniprot.org/uniprot/Q93077","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P58876","name" : "AcK13-HIST1H2BD","definition" : "https://www.uniprot.org/uniprot/P58876","location" : "extracellular region,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P45983","name" : "Mitogen-activated protein kinase 8","definition" : "https://www.uniprot.org/uniprot/P45983","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P55273","name" : "CDKN2D","definition" : "https://www.uniprot.org/uniprot/P55273","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q16539","name" : "Mitogen-activated protein kinase 14","definition" : "https://www.uniprot.org/uniprot/Q16539","location" : "cytosol,nucleoplasm,ficolin-1-rich granule lumen,secretory granule lumen,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P42771","name" : "p16-INK4a","definition" : "https://www.uniprot.org/uniprot/P42771","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q16644","name" : "MAPKAPK3","definition" : "https://www.uniprot.org/uniprot/Q16644","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9HCJ0","name" : "TNRC6C","definition" : "https://www.uniprot.org/uniprot/Q9HCJ0","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P62979","name" : "N6-glycyl-L-lysine-RPS27A(1-76)","definition" : "https://www.uniprot.org/uniprot/P62979","location" : "endosome membrane,mitochondrial outer membrane,endocytic vesicle membrane,plasma membrane,endoplasmic reticulum membrane,nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P52564","name" : "Dual specificity mitogen-activated protein kinase kinase 6","definition" : "https://www.uniprot.org/uniprot/P52564","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P06899","name" : "AcK6-HIST1H2BJ","definition" : "https://www.uniprot.org/uniprot/P06899","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P62805","name" : "Me2sR4-HIST1H4","definition" : "https://www.uniprot.org/uniprot/P62805","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q16777","name" : "HIST2H2AC","definition" : "https://www.uniprot.org/uniprot/Q16777","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01574","name" : "IFNB1","definition" : "https://www.uniprot.org/uniprot/P01574","location" : "extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q14186","name" : "TFDP1","definition" : "https://www.uniprot.org/uniprot/Q14186","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P05412","name" : "Transcription factor AP-1","definition" : "https://www.uniprot.org/uniprot/P05412","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q99880","name" : "AcK6-HIST1H2BL","definition" : "https://www.uniprot.org/uniprot/Q99880","location" : "extracellular region,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q71DI3","name" : "2xAcK-HIST2H3A","definition" : "https://www.uniprot.org/uniprot/Q71DI3","location" : "extracellular region,cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9H9G7","name" : "EIF2C3","definition" : "https://www.uniprot.org/uniprot/Q9H9G7","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9BTM1","name" : "H2AFJ","definition" : "https://www.uniprot.org/uniprot/Q9BTM1","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q96A08","name" : "AcK17-HIST1H2BA","definition" : "https://www.uniprot.org/uniprot/Q96A08","location" : "extracellular region,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q15759","name" : "Mitogen-activated protein kinase 11","definition" : "https://www.uniprot.org/uniprot/Q15759","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O95819","name" : "MAP4K4","definition" : "https://www.uniprot.org/uniprot/O95819","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q15910","name" : "EZH2","definition" : "https://www.uniprot.org/uniprot/Q15910","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P45984","name" : "MAPK9","definition" : "https://www.uniprot.org/uniprot/P45984","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q16778","name" : "AcK16-HIST2H2BE","definition" : "https://www.uniprot.org/uniprot/Q16778","location" : "extracellular region,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P10599","name" : "Thioredoxin","definition" : "https://www.uniprot.org/uniprot/P10599","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P0C5Y9","name" : "H2AFB1","definition" : "https://www.uniprot.org/uniprot/P0C5Y9","location" : "extracellular region,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P62807","name" : "AcK16-HIST1H2BC","definition" : "https://www.uniprot.org/uniprot/P62807","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P57053","name" : "H2BFS","definition" : "https://www.uniprot.org/uniprot/P57053","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q99879","name" : "HIST1H2BM","definition" : "https://www.uniprot.org/uniprot/Q99879","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q16576","name" : "RBBP7","definition" : "https://www.uniprot.org/uniprot/Q16576","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P0CG48","name" : "N6-glycyl-L-lysine-UBC(229-304)","definition" : "https://www.uniprot.org/uniprot/P0CG48","location" : "nucleoplasm,mitochondrial outer membrane,endoplasmic reticulum membrane,endocytic vesicle membrane,endosome membrane,plasma membrane,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q14188","name" : "TFDP2","definition" : "https://www.uniprot.org/uniprot/Q14188","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q96GD3-2","name" : "SCMH1-2","definition" : "https://www.uniprot.org/uniprot/Q96GD3-2","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P23527","name" : "AcK6-HIST1H2BO","definition" : "https://www.uniprot.org/uniprot/P23527","location" : "extracellular region,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P16104","name" : "Me2sR4-H2AFX","definition" : "https://www.uniprot.org/uniprot/P16104","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9HCK5","name" : "EIF2C4","definition" : "https://www.uniprot.org/uniprot/Q9HCK5","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O00716","name" : "p-E2F3","definition" : "https://www.uniprot.org/uniprot/O00716","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P53779","name" : "MAPK10","definition" : "https://www.uniprot.org/uniprot/P53779","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P62987","name" : "N6-glycyl-L-lysine-UBA52(1-76)","definition" : "https://www.uniprot.org/uniprot/P62987","location" : "endocytic vesicle membrane,cytosol,endosome membrane,plasma membrane,nucleoplasm,endoplasmic reticulum membrane,mitochondrial outer membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q09028","name" : "RBBP4","definition" : "https://www.uniprot.org/uniprot/Q09028","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P35226","name" : "BMI1","definition" : "https://www.uniprot.org/uniprot/P35226","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O75530","name" : "EED","definition" : "https://www.uniprot.org/uniprot/O75530","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P04637","name" : "p-S37-TP53","definition" : "https://www.uniprot.org/uniprot/P04637","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P78364","name" : "PHC1","definition" : "https://www.uniprot.org/uniprot/P78364","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q99496","name" : "RNF2","definition" : "https://www.uniprot.org/uniprot/Q99496","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q00534","name" : "p-T177-CDK6","definition" : "https://www.uniprot.org/uniprot/Q00534","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q14209","name" : "E2F2","definition" : "https://www.uniprot.org/uniprot/Q14209","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q8N4C8","name" : "MINK1","definition" : "https://www.uniprot.org/uniprot/Q8N4C8","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q01094","name" : "p-E2F1","definition" : "https://www.uniprot.org/uniprot/Q01094","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q71UI9","name" : "H2AFV","definition" : "https://www.uniprot.org/uniprot/Q71UI9","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P68431","name" : "AcK19-HIST1H3A","definition" : "https://www.uniprot.org/uniprot/P68431","location" : "extracellular region,nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P42772","name" : "CDKN2B","definition" : "https://www.uniprot.org/uniprot/P42772","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q8IXK0","name" : "PHC2","definition" : "https://www.uniprot.org/uniprot/Q8IXK0","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9UKE5","name" : "TNIK","definition" : "https://www.uniprot.org/uniprot/Q9UKE5","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q8N726","name" : "p14-ARF","definition" : "https://www.uniprot.org/uniprot/Q8N726","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O60814","name" : "AcK21-HIST1H2BK","definition" : "https://www.uniprot.org/uniprot/O60814","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9UPQ9","name" : "TNRC6B","definition" : "https://www.uniprot.org/uniprot/Q9UPQ9","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9UL18","name" : "EIF2C1","definition" : "https://www.uniprot.org/uniprot/Q9UL18","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q99877","name" : "Ub-HIST1H2BN","definition" : "https://www.uniprot.org/uniprot/Q99877","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P04908","name" : "MeR4-HIST1H2AB","definition" : "https://www.uniprot.org/uniprot/P04908","location" : "extracellular region,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q8NDV7","name" : "TNRC6A","definition" : "https://www.uniprot.org/uniprot/Q8NDV7","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9HC52","name" : "CBX8","definition" : "https://www.uniprot.org/uniprot/Q9HC52","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O00257","name" : "CBX4","definition" : "https://www.uniprot.org/uniprot/O00257","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O95503","name" : "CBX6","definition" : "https://www.uniprot.org/uniprot/O95503","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O15151","name" : "p-S403-MDM4","definition" : "https://www.uniprot.org/uniprot/O15151","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P33778","name" : "AcK6-HIST1H2BB","definition" : "https://www.uniprot.org/uniprot/P33778","location" : "extracellular region,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P45985","name" : "MAP2K4","definition" : "https://www.uniprot.org/uniprot/P45985","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P0C0S5","name" : "Me2sR4-H2AFZ","definition" : "https://www.uniprot.org/uniprot/P0C0S5","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P49137","name" : "MAPKAPK2","definition" : "https://www.uniprot.org/uniprot/P49137","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P46734","name" : "Dual specificity mitogen-activated protein kinase kinase 3","definition" : "https://www.uniprot.org/uniprot/P46734","location" : "nucleoplasm,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q06587","name" : "RING1","definition" : "https://www.uniprot.org/uniprot/Q06587","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P84243","name" : "H3F3A","definition" : "https://www.uniprot.org/uniprot/P84243","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q99683","name" : "MAP3K5","definition" : "https://www.uniprot.org/uniprot/Q99683","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q6FI13","name" : "MeR4-HIST2H2AA3","definition" : "https://www.uniprot.org/uniprot/Q6FI13","location" : "nucleoplasm,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O15054","name" : "KDM6B","definition" : "https://www.uniprot.org/uniprot/O15054","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q8NDX5","name" : "PHC3","definition" : "https://www.uniprot.org/uniprot/Q8NDX5","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q99878","name" : "Ub-HIST1H2AJ","definition" : "https://www.uniprot.org/uniprot/Q99878","location" : "extracellular region,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q8IW41","name" : "p-S115","definition" : "https://www.uniprot.org/uniprot/Q8IW41","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q14781","name" : "CBX2","definition" : "https://www.uniprot.org/uniprot/Q14781","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P01100","name" : "FOS","definition" : "https://www.uniprot.org/uniprot/P01100","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q15022","name" : "SUZ12","definition" : "https://www.uniprot.org/uniprot/Q15022","location" : "nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9HCE1","name" : "MOV10","definition" : "https://www.uniprot.org/uniprot/Q9HCE1","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P42773","name" : "CDKN2C","definition" : "https://www.uniprot.org/uniprot/P42773","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P20671","name" : "MeR12-HIST1H2AD","definition" : "https://www.uniprot.org/uniprot/P20671","location" : "extracellular region,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P0CG47","name" : "adenylatedG76-UBB(1-76)","definition" : "https://www.uniprot.org/uniprot/P0CG47","location" : "plasma membrane,cytosol,endosome membrane,nucleoplasm,endoplasmic reticulum membrane,endocytic vesicle membrane,mitochondrial outer membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P11802","name" : "p-T172-CDK4","definition" : "https://www.uniprot.org/uniprot/P11802","location" : "cytosol,nucleoplasm","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:29105","name" : "zinc(2+) ion","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=29105","location" : "endosome membrane,synaptic vesicle membrane,Golgi membrane,endocytic vesicle membrane,nucleoplasm,mitochondrial intermembrane space,secretory granule lumen,mitochondrial matrix,plasma membrane,Golgi lumen,endoplasmic reticulum lumen,mitochondrial inner membrane,endosome lumen,cytosol,lysosomal lumen,clathrin-coated endocytic vesicle membrane,melanosome membrane,extracellular region,phagocytic vesicle lumen,endoplasmic reticulum membrane","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:15422","name" : "({[({[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy](hydroxy)phosphoryl}oxy)phosphonic acid","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=15422","location" : "endoplasmic reticulum lumen,mitochondrial matrix,plasma membrane,extracellular region,peroxisomal matrix,cilium,cytosol,nucleoplasm,mitochondrial intermembrane space,endoplasmic reticulum membrane,platelet dense granule lumen","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:29888","name" : "PPi ","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=29888","location" : "cytosol,peroxisomal matrix,endoplasmic reticulum membrane,nucleoplasm,platelet dense granule lumen,mitochondrial matrix,endoplasmic reticulum lumen,extracellular region","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:17489","name" : "(4aR,6R,7R,7aS)-6-(6-amino-9H-purin-9-yl)-2,7-dihydroxy-hexahydro-2\\u03bb\\u2075-furo[3,2-d][1,3,2]dioxaphosphinin-2-one","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=17489","location" : "cytosol","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:15378","name" : "hydron","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=15378","location" : "peroxisomal matrix,Golgi lumen,endocytic vesicle lumen,phagocytic vesicle lumen,mitochondrial matrix,extracellular region,cytosol,mitochondrial intermembrane space,synaptic vesicle,nuclear envelope,late endosome lumen,endolysosome lumen,melanosome lumen,mitochondrial inner membrane,endoplasmic reticulum lumen,early endosome,phagolysosome,clathrin-sculpted acetylcholine transport vesicle lumen,early endosome lumen,platelet dense tubular network lumen,cytoplasm,sperm flagellum,lysosomal lumen,clathrin-sculpted monoamine transport vesicle lumen,synaptic vesicle lumen","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "ChEBI:29108","name" : "Ca2+ ","definition" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=29108","location" : "platelet dense tubular network lumen,platelet dense tubular network membrane,endocytic vesicle lumen,nuclear envelope,endoplasmic reticulum membrane,cytosol,mitochondrial inner membrane,mitochondrial matrix,lysosomal lumen,endoplasmic reticulum lumen,plasma membrane,endosome membrane,Golgi lumen,mitochondrial intermembrane space,sarcoplasmic reticulum lumen,secretory granule lumen,nucleoplasm,extracellular region,platelet dense granule lumen","subgroup" : "ChEBI","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P13423","name" : "PA83","definition" : "https://www.uniprot.org/uniprot/P13423","location" : "extracellular region,endosome membrane,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9H6X2-1","name" : "ANTXR1-1","definition" : "https://www.uniprot.org/uniprot/Q9H6X2-1","location" : "plasma membrane,endosome membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q9H6X2-2","name" : "ANTXR1-2","definition" : "https://www.uniprot.org/uniprot/Q9H6X2-2","location" : "plasma membrane,endosome membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P58335-4","name" : "ANTXR2-4","definition" : "https://www.uniprot.org/uniprot/P58335-4","location" : "plasma membrane,endosome membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P36507","name" : "MAP2K2(11-400)","definition" : "https://www.uniprot.org/uniprot/P36507","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P15917","name" : "LF","definition" : "https://www.uniprot.org/uniprot/P15917","location" : "plasma membrane,endosome membrane,cytosol,extracellular region","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P0DP23","name" : "Me3K115-CALM1","definition" : "https://www.uniprot.org/uniprot/P0DP23","location" : "extracellular region,cytosol,nucleoplasm,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P40136","name" : "EF","definition" : "https://www.uniprot.org/uniprot/P40136","location" : "extracellular region,endosome membrane,plasma membrane,cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q8WUM4","name" : "PDCD6IP","definition" : "https://www.uniprot.org/uniprot/Q8WUM4","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P58335-1","name" : "ANTXR2-1","definition" : "https://www.uniprot.org/uniprot/P58335-1","location" : "endosome membrane,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P09958","name" : "FURIN","definition" : "https://www.uniprot.org/uniprot/P09958","location" : "Golgi lumen,extracellular region,Golgi membrane,plasma membrane","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:Q02750","name" : "Dual specificity mitogen-activated protein kinase kinase 1","definition" : "https://www.uniprot.org/uniprot/Q02750","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P45985","name" : "MAP2K4","definition" : "https://www.uniprot.org/uniprot/P45985","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:O14733","name" : "MAP2K7(2-?)","definition" : "https://www.uniprot.org/uniprot/O14733","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P52564-1","name" : "MAP2K6-1(15-334)","definition" : "https://www.uniprot.org/uniprot/P52564-1","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "Uniprot:P46734-3","name" : "MAP2K3-3(1-26)","definition" : "https://www.uniprot.org/uniprot/P46734-3","location" : "cytosol","subgroup" : "Uniprot","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5684264","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5684264","location" : "","subgroup" : "R-HSA-5684264","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-450321","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-450321","location" : "","subgroup" : "R-HSA-450321","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2871796","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2871796","location" : "","subgroup" : "R-HSA-2871796","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-2559580","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-2559580","location" : "","subgroup" : "R-HSA-2559580","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "R-HSA-5210891","name" : "N/A","definition" : "http://www.reactome.org/content/detail/R-HSA-5210891","location" : "","subgroup" : "R-HSA-5210891","group" : "gene-pathway-annotation"},"group" : "nodes"}, {"data" : {"id" : "MAP2K4","name" : "Dual specificity mitogen-activated protein kinase kinase 4","definition" : "https://www.ncbi.nlm.nih.gov/gene/6416","location" : "cytosol,nucleus,dendrite cytoplasm","subgroup" : "MAP2K4","group" : "main"},"group" : "nodes"}],"edges" : [{"data" : {"source" : "R-HSA-5684264","target" : "ChEBI:15422","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "ChEBI:16761","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:Q9Y6K9","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:P41279","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:P45985","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:P0CG48","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:Q9Y297","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:P19838","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:Q02750","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:Q8NFZ5","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:Q9UKB1","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:P62987","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:P0CG47","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:P63208","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:P62979","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5684264","target" : "Uniprot:Q13616","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "ChEBI:15996","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "ChEBI:15422","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "ChEBI:16761","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "ChEBI:17552","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q13094","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P16885","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P63000","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01706","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P06310","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01704","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P04211","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01615","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV61","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q6PIL0","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P19174","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV64","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P53779","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01614","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P06315","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01597","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01764","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01624","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01619","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV66","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01721","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01834","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P04430","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01742","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV83","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01112","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q9UKW4","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01817","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P04432","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV87","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01718","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:A0A0C4DH73","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV90","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P15498","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P30273","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV81","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01709","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01601","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P12319","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01714","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01825","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q13153","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P43405","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01100","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01699","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV80","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV65","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01111","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:O75791","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01743","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV82","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV91","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:A0A075B6S6","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P06331","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV92","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q13233","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01780","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01772","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV86","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01703","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:O14733","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01767","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01593","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01602","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P52735","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV79","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:A0M8Q6","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV68","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P04433","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01715","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV85","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV84","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:A2NXD2","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01782","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01814","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01854","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P29353-2","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01594","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:A0A0C4DH25","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01599","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV69","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01763","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P0CF74","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q13177","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:A2KUC3","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P06312","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV75","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01611","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P07948","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P80748","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV89","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV67","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01762","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:A0A075B6P5","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01768","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01824","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P0CG04","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q07889","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01701","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01717","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P62993-1","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P23083","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01116","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P05412","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P45983","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:O43561-2","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01705","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:Q5NV62","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:A2NJV5","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01700","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P45985","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P01766","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2871796","target" : "Uniprot:P45984","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "ChEBI:15422","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "ChEBI:59414","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "ChEBI:16761","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "ChEBI:59271","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:P0CG47","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:Q9Y6K9","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:P61088","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:Q8N5C8","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:Q9HC29","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:O43318","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:P45984","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:P53779","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:Q15750","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:P62987","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:O14733","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:O43353","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:Q9NYJ8","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:P45983","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:P45985","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:Q9Y239","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:P0CG48","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:Q13404","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:O43187","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:Q9Y4K3","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-450321","target" : "Uniprot:P62979","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "ChEBI:15422","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "ChEBI:16761","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "ChEBI:30915","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "ChEBI:26523","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "ChEBI:16680","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "ChEBI:15741","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "ChEBI:15414","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "ChEBI:18248","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q93079","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q8N257","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q93077","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P58876","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P45983","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P55273","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q16539","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P42771","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q16644","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q9HCJ0","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P62979","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P52564","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P06899","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P62805","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q16777","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P01574","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q14186","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P05412","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q99880","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q71DI3","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q9H9G7","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q9BTM1","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q96A08","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q15759","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:O95819","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q15910","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P45984","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q16778","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P10599","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P0C5Y9","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P62807","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P57053","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q99879","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q16576","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P0CG48","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q14188","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q96GD3-2","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P23527","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P16104","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q9HCK5","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:O00716","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P53779","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P62987","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q09028","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P35226","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:O75530","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P04637","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P78364","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q99496","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q00534","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q14209","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q8N4C8","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q01094","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q71UI9","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P68431","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P42772","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q8IXK0","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q9UKE5","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q8N726","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:O60814","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q9UPQ9","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q9UL18","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q99877","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P04908","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q8NDV7","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q9HC52","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:O00257","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:O95503","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:O15151","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P33778","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P45985","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P0C0S5","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P49137","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P46734","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q06587","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P84243","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q99683","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q6FI13","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:O15054","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q8NDX5","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q99878","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q8IW41","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q14781","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P01100","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q15022","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:Q9HCE1","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P42773","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P20671","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P0CG47","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-2559580","target" : "Uniprot:P11802","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "ChEBI:29105","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "ChEBI:15422","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "ChEBI:29888","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "ChEBI:17489","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "ChEBI:15378","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "ChEBI:29108","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:P13423","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:Q9H6X2-1","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:Q9H6X2-2","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:P58335-4","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:P36507","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:P15917","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:P0DP23","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:P40136","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:Q8WUM4","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:P58335-1","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:P09958","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:Q02750","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:P45985","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:O14733","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:P52564-1","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "R-HSA-5210891","target" : "Uniprot:P46734-3","name" : "annotates","pubmedId" : "","subgroup" : "annotates","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P53779","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV82","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01825","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O15054","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P20671","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P23083","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P52735","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV75","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9UPQ9","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P52564","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O14733","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q00534","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P62979","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P63000","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV90","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:A0A075B6S6","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q13153","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q13177","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q06587","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9Y6K9","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV65","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9HCJ0","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P68431","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q99880","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P04908","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01854","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01593","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q8NDV7","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P11802","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P0CG48","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P58335-1","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P04430","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P29353-2","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P45985","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q15910","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P61088","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P04211","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:A2KUC3","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01116","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q15759","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q8N5C8","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q99496","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9UKB1","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV87","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P53779","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01767","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P04432","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P62987","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9BTM1","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P0CG04","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV67","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01817","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P53779","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P04433","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:A0A0C4DH25","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P16885","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q8N726","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV68","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P06899","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P30273","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P23527","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q13233","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01700","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV64","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q93079","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P33778","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O43187","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01834","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:A0A0C4DH73","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q96GD3-2","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q71UI9","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P36507","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P06331","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q14209","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV80","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P78364","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P58876","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01597","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q14781","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O14733","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01715","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:A2NJV5","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P45984","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O95819","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O00716","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9Y6K9","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV89","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01100","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P07948","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P12319","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P06315","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01100","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O14733","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q99683","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P80748","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV86","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P62807","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P58335-4","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q16644","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O75530","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01574","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P05412","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P45985","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:A0A075B6P5","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q8WUM4","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P15498","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q16539","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q07889","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV61","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P42772","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9H6X2-2","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O95503","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01743","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01714","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q13616","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q6PIL0","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q99879","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P62993-1","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P62987","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9Y297","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9Y4K3","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01742","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q71DI3","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P10599","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01594","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01619","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q02750","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P45985","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01780","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P0CG47","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P35226","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P45985","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9Y239","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01601","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P06310","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q13094","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01703","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q93077","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q8N257","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q99877","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P40136","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P19174","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01772","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O43561-2","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9NYJ8","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01766","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01709","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01111","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01112","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01718","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01782","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P57053","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P0C0S5","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O43318","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9UKW4","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q16576","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:A2NXD2","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9UKE5","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P62979","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01717","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01611","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P45983","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q6FI13","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9UL18","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P45983","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01768","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P43405","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV69","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P13423","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P84243","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P62805","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O00257","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P55273","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P0CG48","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q01094","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P0CG47","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9HCK5","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P45984","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q16777","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P45985","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01699","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01701","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV84","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q15750","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01824","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q8N4C8","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P15917","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P62979","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P49137","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q16778","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q02750","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9HC29","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q8NFZ5","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P0CF74","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q14188","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P46734","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P52564-1","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01615","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P63208","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV62","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P0CG47","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q8IXK0","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01706","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P42773","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P45983","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q14186","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9H6X2-1","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01763","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O60814","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV79","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV91","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01764","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P0C5Y9","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P05412","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9H9G7","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q8NDX5","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01814","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P42771","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01704","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q96A08","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P46734-3","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV85","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV92","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV83","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P06312","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01624","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P0DP23","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q15022","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q8IW41","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV66","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P62987","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01705","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01602","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P41279","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01762","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O75791","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:A0M8Q6","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P19838","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01599","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9HC52","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P45984","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P0CG48","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q9HCE1","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O43353","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01614","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:O15151","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q5NV81","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P04637","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q99878","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P16104","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q13404","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P01721","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:Q09028","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}, {"data" : {"source" : "MAP2K4","target" : "Uniprot:P09958","name" : "expresses","pubmedId" : "","subgroup" : "expresses","group" : "gene-pathway-annotation"},"group" : "edges"}]};
+export const sample_graph = {
+        "nodes": [
+            {
+                "data": {
+                    "id": "SPAG9",
+                    "name": "C-Jun-amino-terminal kinase-interacting protein 4",
+                    "definition": "https://www.ncbi.nlm.nih.gov/gene/9043",
+                    "location": "cytoplasm,perinuclear region of cytoplasm,acrosomal vesicle,cytosol,extracellular exosome",
+                    "subgroup": "SPAG9",
+                    "group": "main"
+                },
+                "position": {
+                    "x": 951.3076549058273,
+                    "y": 400.90003494718735
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0005078",
+                    "name": "MAP-kinase scaffold activity",
+                    "definition": "The binding activity of a molecule that functions as a physical support for the assembly of a multiprotein mitogen-activated protein kinase [MAPK] complex. Binds multiple kinases of the MAPKKK cascade, and also upstream signaling proteins, permitting those molecules to function in a coordinated way. Bringing together multiple enzymes and their substrates enables the signal to be transduced quickly and efficiently.",
+                    "location": "",
+                    "subgroup": "molecular_function",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 1422.3951921914495,
+                    "y": 240.00688906554538
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0005515",
+                    "name": "protein binding",
+                    "definition": "Interacting selectively and non-covalently with any protein or protein complex [a complex of two or more proteins that may include other nonprotein molecules].",
+                    "location": "",
+                    "subgroup": "molecular_function",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 863.05655264287,
+                    "y": 818.4000399471875
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0019894",
+                    "name": "kinesin binding",
+                    "definition": "Interacting selectively and non-covalently and stoichiometrically with kinesin, a member of a superfamily of microtubule-based motor proteins that perform force-generating tasks such as organelle transport and chromosome segregation.",
+                    "location": "",
+                    "subgroup": "molecular_function",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 306.3076519058274,
+                    "y": 418.40003494718735
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0030159",
+                    "name": "receptor signaling complex scaffold activity",
+                    "definition": "Functions to provide a physical support for the assembly of a multiprotein receptor signaling complex.",
+                    "location": "",
+                    "subgroup": "molecular_function",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 1381.3076569058273,
+                    "y": 480.00689206554534
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0008432",
+                    "name": "JUN kinase binding",
+                    "definition": "Interacting selectively and non-covalently with JUN kinase, an enzyme that catalyzes the phosphorylation and activation of members of the JUN family.",
+                    "location": "",
+                    "subgroup": "molecular_function",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 421.3076529058274,
+                    "y": 498.4000359471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0001669",
+                    "name": "(",
+                    "definition": "A structure in the head of a spermatozoon that contains acid hydrolases, and is concerned with the breakdown of the outer membrane of the ovum during fertilization. It lies just beneath the plasma membrane and is derived from the lysosome.",
+                    "location": "",
+                    "subgroup": "cellular_component",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 1207.3951911914494,
+                    "y": 240.00688906554538
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0005829",
+                    "name": "cytosol",
+                    "definition": "The part of the cytoplasm that does not contain organelles but which does contain other particulate matter, such as protein complexes.",
+                    "location": "",
+                    "subgroup": "cellular_component",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 992.3951901914496,
+                    "y": 258.40003294718736
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0005815",
+                    "name": "(",
+                    "definition": "An intracellular structure that can catalyze gamma-tubulin-dependent microtubule nucleation and that can anchor microtubules by interacting with their minus ends, plus ends or sides.",
+                    "location": "",
+                    "subgroup": "cellular_component",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 521.3076529058275,
+                    "y": 418.40003494718735
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0048471",
+                    "name": "perinuclear region of cytoplasm",
+                    "definition": "Cytoplasm situated near, or occurring around, the nucleus.",
+                    "location": "",
+                    "subgroup": "cellular_component",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 421.3076529058274,
+                    "y": 578.4000369471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0070062",
+                    "name": "extracellular exosome",
+                    "definition": "A vesicle that is released into the extracellular region by fusion of the limiting endosomal membrane of a multivesicular body with the plasma membrane. Extracellular exosomes, also simply called exosomes, have a diameter of about 40-100 nm.",
+                    "location": "",
+                    "subgroup": "cellular_component",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 863.05655264287,
+                    "y": 738.4000389471875
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0005737",
+                    "name": "cytoplasm",
+                    "definition": "All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.",
+                    "location": "",
+                    "subgroup": "cellular_component",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 1154.8075153528946,
+                    "y": 613.4000369471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0045666",
+                    "name": "positive regulation of neuron differentiation",
+                    "definition": "Any process that activates or increases the frequency, rate or extent of neuron differentiation.",
+                    "location": "",
+                    "subgroup": "biological_process",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 778.0214629413443,
+                    "y": 1138.4000439471872
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0051149",
+                    "name": "positive regulation of muscle cell differentiation",
+                    "definition": "Any process that activates or increases the frequency, rate or extent of muscle cell differentiation.",
+                    "location": "",
+                    "subgroup": "biological_process",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 1608.8076579058272,
+                    "y": 320.00689006554535
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0051146",
+                    "name": "striated muscle cell differentiation",
+                    "definition": "The process in which a relatively unspecialized cell acquires specialized features of a striated muscle cell; striated muscle fibers are divided by transverse bands into striations, and cardiac and voluntary muscle are types of striated muscle.",
+                    "location": "",
+                    "subgroup": "biological_process",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 1045.4838277852812,
+                    "y": 98.4000309471874
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0051260",
+                    "name": "protein homooligomerization",
+                    "definition": "The process of creating protein oligomers, compounds composed of a small number, usually between three and ten, of identical component monomers. Oligomers may be formed by the polymerization of a number of monomers or the depolymerization of a large protein polymer.",
+                    "location": "",
+                    "subgroup": "biological_process",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 1107.1976726955622,
+                    "y": 1058.4000429471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0042147",
+                    "name": "retrograde transport, endosome to Golgi",
+                    "definition": "The directed movement of membrane-bounded vesicles from endosomes back to the trans-Golgi network where they are recycled for further rounds of transport.",
+                    "location": "",
+                    "subgroup": "biological_process",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 1154.8075153528946,
+                    "y": 693.4000379471872
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0016192",
+                    "name": "vesicle-mediated transport",
+                    "definition": "A cellular transport process in which transported substances are moved in membrane-bounded vesicles; transported substances are enclosed in the vesicle lumen or located in the vesicle membrane. The process begins with a step that directs a substance to the forming vesicle, and includes vesicle budding and coating. Vesicles are then targeted to, and fuse with, an acceptor membrane.",
+                    "location": "",
+                    "subgroup": "biological_process",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 901.3076549058273,
+                    "y": 498.4000359471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0030335",
+                    "name": "positive regulation of cell migration",
+                    "definition": "Any process that activates or increases the frequency, rate or extent of cell migration.",
+                    "location": "",
+                    "subgroup": "biological_process",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 901.3076549058273,
+                    "y": 578.4000369471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "GO:0007257",
+                    "name": "activation of JUN kinase activity",
+                    "definition": "The initiation of the activity of the inactive enzyme JUN kinase [JNK].",
+                    "location": "",
+                    "subgroup": "biological_process",
+                    "group": "gene-go-annotation"
+                },
+                "position": {
+                    "x": 1113.2565571105933,
+                    "y": -61.59997105281252
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "ChEBI:15996",
+                    "name": "({[({[(2R,3S,4R,5R)-5-(2-amino-6-oxo-6,9-dihydro-1H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy](hydroxy)phosphoryl}oxy)phosphonic acid",
+                    "definition": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=15996",
+                    "location": "endocytic vesicle lumen,mitochondrial matrix,cytosol,extracellular region,Golgi lumen,ER to Golgi transport vesicle membrane,cilium,Golgi membrane,early endosome membrane,nucleoplasm,cytoplasmic vesicle membrane,platelet dense granule lumen,lysosomal membrane",
+                    "subgroup": "ChEBI",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 824.2338267852812,
+                    "y": 80.9000309471874
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "ChEBI:15422",
+                    "name": "({[({[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy](hydroxy)phosphoryl}oxy)phosphonic acid",
+                    "definition": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=15422",
+                    "location": "endoplasmic reticulum membrane,endoplasmic reticulum lumen,extracellular region,platelet dense granule lumen,peroxisomal matrix,mitochondrial matrix,nucleoplasm,plasma membrane,mitochondrial intermembrane space,cytosol,cilium",
+                    "subgroup": "ChEBI",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1376.057516352895,
+                    "y": 737.5068950655453
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "ChEBI:16761",
+                    "name": "[({[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl)oxy]phosphonic acid",
+                    "definition": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=16761",
+                    "location": "extracellular region,endoplasmic reticulum lumen,mitochondrial matrix,plasma membrane,endoplasmic reticulum membrane,cytosol,cilium,mitochondrial intermembrane space,nucleoplasm,platelet dense granule lumen",
+                    "subgroup": "ChEBI",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1122.5576559058275,
+                    "y": 355.9000339471874
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P55291",
+                    "name": "CDH15",
+                    "definition": "https://www.uniprot.org/uniprot/P55291",
+                    "location": "plasma membrane",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 661.3076539058275,
+                    "y": 578.4000369471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:Q06413",
+                    "name": "p-S396-MEF2C",
+                    "definition": "https://www.uniprot.org/uniprot/Q06413",
+                    "location": "nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1070.4838277852812,
+                    "y": 18.400029947187438
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P19022",
+                    "name": "CDH2",
+                    "definition": "https://www.uniprot.org/uniprot/P19022",
+                    "location": "endoplasmic reticulum lumen,plasma membrane",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 674.807513352895,
+                    "y": 658.4000379471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:Q02078",
+                    "name": "p-S408-MEF2A",
+                    "definition": "https://www.uniprot.org/uniprot/Q02078",
+                    "location": "nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1394.807516352895,
+                    "y": 640.0068940655455
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:Q02080",
+                    "name": "MEF2B",
+                    "definition": "https://www.uniprot.org/uniprot/Q02080",
+                    "location": "nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 967.3951901914496,
+                    "y": 178.40003194718736
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P15172",
+                    "name": "MYOD1",
+                    "definition": "https://www.uniprot.org/uniprot/P15172",
+                    "location": "nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1406.3076569058273,
+                    "y": 400.0068910655454
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P35221",
+                    "name": "CTNNA1",
+                    "definition": "https://www.uniprot.org/uniprot/P35221",
+                    "location": "cytosol,plasma membrane",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1141.3076559058275,
+                    "y": 453.40003494718735
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P53778",
+                    "name": "MAPK12",
+                    "definition": "https://www.uniprot.org/uniprot/P53778",
+                    "location": "cytosol,nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1018.0214639413443,
+                    "y": 1138.4000439471872
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:Q99081",
+                    "name": "TCF12",
+                    "definition": "https://www.uniprot.org/uniprot/Q99081",
+                    "location": "nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1406.3076569058273,
+                    "y": 560.0068930655453
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:Q14814",
+                    "name": "MEF2D",
+                    "definition": "https://www.uniprot.org/uniprot/Q14814",
+                    "location": "nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1141.3076559058275,
+                    "y": 533.4000359471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:Q16539",
+                    "name": "Mitogen-activated protein kinase 14",
+                    "definition": "https://www.uniprot.org/uniprot/Q16539",
+                    "location": "ficolin-1-rich granule lumen,extracellular region,secretory granule lumen,nucleoplasm,cytosol",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 761.3076539058275,
+                    "y": 338.40003394718735
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P00519",
+                    "name": "ABL1",
+                    "definition": "https://www.uniprot.org/uniprot/P00519",
+                    "location": "nucleoplasm,cytosol",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1368.8076569058273,
+                    "y": 320.00689006554535
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:O00634",
+                    "name": "NTN3",
+                    "definition": "https://www.uniprot.org/uniprot/O00634",
+                    "location": "extracellular region",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 838.05655264287,
+                    "y": 898.4000409471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P15923",
+                    "name": "p-S139-TCF3",
+                    "definition": "https://www.uniprot.org/uniprot/P15923",
+                    "location": "nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 752.3951891914497,
+                    "y": 258.40003294718736
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P35222",
+                    "name": "p-S552-CTNNB1",
+                    "definition": "https://www.uniprot.org/uniprot/P35222",
+                    "location": "plasma membrane,cytosol,nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 761.3076539058275,
+                    "y": 418.40003494718735
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:Q92859",
+                    "name": "NEO1",
+                    "definition": "https://www.uniprot.org/uniprot/Q92859",
+                    "location": "plasma membrane",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 947.9772880612489,
+                    "y": -176.5999720528125
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:Q4KMG0",
+                    "name": "CDON",
+                    "definition": "https://www.uniprot.org/uniprot/Q4KMG0",
+                    "location": "plasma membrane",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1103.0565536428699,
+                    "y": 853.4000399471875
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P15884",
+                    "name": "TCF4",
+                    "definition": "https://www.uniprot.org/uniprot/P15884",
+                    "location": "nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 873.2565561105935,
+                    "y": -96.59997105281252
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P60953",
+                    "name": "Cell division control protein 42 homolog",
+                    "definition": "https://www.uniprot.org/uniprot/P60953",
+                    "location": "endoplasmic reticulum membrane,plasma membrane,cytosol",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 702.3951891914497,
+                    "y": 178.40003194718736
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P26232",
+                    "name": "CTNNA2",
+                    "definition": "https://www.uniprot.org/uniprot/P26232",
+                    "location": "cytosol",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 661.3076539058275,
+                    "y": 498.4000359471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:Q9BWV1-1",
+                    "name": "BOC-1",
+                    "definition": "https://www.uniprot.org/uniprot/Q9BWV1-1",
+                    "location": "plasma membrane",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1380.55655464287,
+                    "y": 835.0068960655453
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P23409",
+                    "name": "MYF6",
+                    "definition": "https://www.uniprot.org/uniprot/P23409",
+                    "location": "nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 623.05655164287,
+                    "y": 738.4000389471875
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P15173",
+                    "name": "MYOG",
+                    "definition": "https://www.uniprot.org/uniprot/P15173",
+                    "location": "nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 623.05655164287,
+                    "y": 818.4000399471875
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:Q12982",
+                    "name": "BNIP2",
+                    "definition": "https://www.uniprot.org/uniprot/Q12982",
+                    "location": "cytosol",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 496.3076529058274,
+                    "y": 338.40003394718735
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P13349",
+                    "name": "MYF5",
+                    "definition": "https://www.uniprot.org/uniprot/P13349",
+                    "location": "nucleoplasm",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 867.1976716955622,
+                    "y": 1058.4000429471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:Q15759",
+                    "name": "Mitogen-activated protein kinase 11",
+                    "definition": "https://www.uniprot.org/uniprot/Q15759",
+                    "location": "nucleoplasm,cytosol",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 953.5885014752048,
+                    "y": 978.4000419471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:P55283",
+                    "name": "CDH4",
+                    "definition": "https://www.uniprot.org/uniprot/P55283",
+                    "location": "plasma membrane",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 1103.0565536428699,
+                    "y": 773.4000389471875
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "Uniprot:O60271",
+                    "name": "SPAG9",
+                    "definition": "https://www.uniprot.org/uniprot/O60271",
+                    "location": "cytosol",
+                    "subgroup": "Uniprot",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 805.4838267852812,
+                    "y": -16.599970052812562
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "id": "R-HSA-375170",
+                    "name": "N/A",
+                    "definition": "http://www.reactome.org/content/detail/R-HSA-375170",
+                    "location": "",
+                    "subgroup": "R-HSA-375170",
+                    "group": "gene-pathway-annotation"
+                },
+                "position": {
+                    "x": 927.3075143528949,
+                    "y": 658.4000379471873
+                },
+                "group": "nodes",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            }
+        ],
+        "edges": [
+            {
+                "data": {
+                    "source": "GO:0005078",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "7bf419c8-2bed-4568-ae47-5db0d8ce4466"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0005515",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "a6c597a6-00eb-487b-b65c-7d534d8b07e6"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0019894",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "78830b4c-044e-483c-8536-1a150ef23d71"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0030159",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "700b3614-2e80-43de-9783-80e05842e0e1"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0008432",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "5d913bce-be1e-4140-8e03-4a3b67c1ce18"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0001669",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "6cc8aef5-1fad-4abe-be17-9c3209799614"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0005829",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "06426edf-8b2c-4ae0-88aa-f8bce95652af"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0005815",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "cbbe4b35-4b67-4e0d-b40e-457594f27a5f"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0048471",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "c470ec9d-b148-472a-bd9c-4ce0c0f8d039"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0070062",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "4cb789f5-fb72-44c2-9ab3-9c9b2600affd"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0005737",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "a8a45966-d93f-42dd-bf99-5e23ec6c92da"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0045666",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "fd61a1f6-f007-4d68-81b3-942bbe5f5f9a"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0051149",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "17668c2c-1538-4a43-881f-0f81f526ea4c"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0051146",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "671425ad-eff2-403e-aa8b-5471903a0c26"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0051260",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "e9a1e05c-2e09-4f30-8e35-b20eca49a7f9"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0042147",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "f69d3920-15da-4475-a166-c6174b1ad7f5"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0016192",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "25ae60e8-b986-41ab-950d-9eacaf6d4793"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0030335",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "b2ff5cb8-0440-45ac-a7fb-156affd890cd"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "GO:0007257",
+                    "target": "SPAG9",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-go-annotation",
+                    "id": "d57b8169-3915-4224-99a4-99b9e1cc7930"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "ChEBI:15996",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "4d261a80-efd7-425f-9971-549834174ba9"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "ChEBI:15422",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "fc1d77ca-33c1-4ec9-8914-ebe6450ba2b2"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "ChEBI:16761",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "902fce0c-135d-4cb2-9480-c9871c663467"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P55291",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "a1fa6eda-d11c-45b5-9320-c6655f57f45b"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:Q06413",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "fbcdac7c-54eb-4c26-af5b-fd41d58af8e2"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P19022",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "01f54d1b-e3cb-4af4-9fa1-7591ee66fbdc"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:Q02078",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "36f6a0d6-4f6c-400f-972f-ec59006afaae"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:Q02080",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "ea3c47c1-2d8e-450e-bffc-97394281bdd2"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P15172",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "3e09bcef-5955-41df-81a3-78dbb148a11c"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P35221",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "469d87fd-98fa-48fb-96ca-faa7f560f1cc"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P53778",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "ed275711-9838-4633-8543-56429355232c"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:Q99081",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "c0b9b632-20d6-4463-9a0a-41e0d9c8486e"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:Q14814",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "a317b9bd-9fd8-43d2-94a6-ce1697f686c3"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:Q16539",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "85ef1732-a85e-48e7-8a61-af5a64851a05"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P00519",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "ede20e55-580f-49ec-b439-3408b401eea4"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:O00634",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "13964053-b3c8-4880-8ac9-574d8f50cca9"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P15923",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "a3ac2656-ff34-4e45-a50f-109f7f427bea"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P35222",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "32e4ac31-4f24-452d-ba6f-c69e9d37a96f"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:Q92859",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "3a27c409-171f-4c4e-bd6e-897d3ee641a6"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:Q4KMG0",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "6ea373a7-c098-40ee-8bd7-c52d7d941894"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P15884",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "d7949fa0-dfbb-4a6e-8174-b6fb870b62f9"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P60953",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "3a0202c0-b40d-47c0-abd1-3b8f77717765"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P26232",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "2f93e930-12c8-4167-9dea-d25851162688"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:Q9BWV1-1",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "a84c6ef0-bcb2-4acc-9c21-2512fa7cf9c0"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P23409",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "c66d1259-a92e-4306-a7ca-3a23d485bf0c"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P15173",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "fbd4c7a5-b3d6-4516-a351-e452a78675b2"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:Q12982",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "09635b4a-22c3-464e-a882-5c66972a9b4a"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P13349",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "9176c93c-31e8-430c-9cb8-1272aacc4d13"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:Q15759",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "6311d6e6-bfda-4462-ac90-9bbefcf8e2d0"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:P55283",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "478e3c91-f756-47f5-bcac-097af641767b"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "R-HSA-375170",
+                    "target": "Uniprot:O60271",
+                    "name": "annotates",
+                    "pubmedId": "",
+                    "subgroup": "annotates",
+                    "group": "gene-pathway-annotation",
+                    "id": "db8dfd38-6fdc-4202-b8bc-4d357040dd1c"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P26232",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "69790818-0f1c-47f2-adc8-370c1207fcca"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:Q92859",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "2c0b4546-9b8c-470f-95e9-81fa7c088270"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P55283",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "1f8d82a9-0e20-468e-8fd6-acfd9cec1c82"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P35222",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "b8044f3d-2f01-4457-8844-1318bc66195b"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:Q06413",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "21694d39-b763-4e49-9c83-aa01a5d7a2ad"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P55291",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "0020f522-b02b-45ac-92cb-1fb065738f3c"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P60953",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "4ad15697-cfc3-4599-b744-f533fd6f3cf8"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P53778",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "86c739b8-425f-4b28-a555-7f123c552901"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P15172",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "5f3ad8ee-2355-44a0-9014-c73e64965279"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:Q99081",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "f92a7fba-d5df-45ca-b2b9-fbd46726e9e1"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:Q02080",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "f47416b6-35f1-440a-88ee-7417d95155e3"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P00519",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "476a5ba8-737b-4b0e-b5fa-81d57ca9a064"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:Q4KMG0",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "364e28b3-4294-4328-b3f5-cf6bbe109c85"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:Q02078",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "11e9dfa8-9de2-465a-b737-6e3f2ad559a1"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P13349",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "73ed61f5-5115-4c93-a65c-5d06f52b4925"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:O60271",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "1321554f-956b-425c-821c-d35c090ff759"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:Q14814",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "3048331f-48c6-4c28-a844-0d050528ec8d"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P35221",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "5d2accc4-4af6-4be3-95f2-49ef15db5e2d"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:O00634",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "14ca3883-cba9-4a4f-a2ae-f9c17ec72372"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:Q9BWV1-1",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "c08854af-d905-4ffe-9b3e-9f26148b6afe"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P15923",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "c998acd3-51c4-42c9-aad6-5e3f401dda43"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:Q16539",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "a1e47bc7-40a5-4995-8270-86568fd4c8ae"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:Q12982",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "276f27db-d704-4e33-9377-9308e2ac6c1c"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P19022",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "dc0745df-ab4a-42cf-b90a-8259dfa7a155"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:Q15759",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "0f149077-1132-4fb6-aed1-bcddef98e5fd"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P15173",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "fc4cca3d-c345-480f-ac1d-ec79fcab18ac"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P23409",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "c48a4e49-6f82-4796-bd78-afdc6935ead0"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            },
+            {
+                "data": {
+                    "source": "SPAG9",
+                    "target": "Uniprot:P15884",
+                    "name": "expresses",
+                    "pubmedId": "",
+                    "subgroup": "expresses",
+                    "group": "gene-pathway-annotation",
+                    "id": "15b0dc32-b236-428d-8057-a73d297f78dd"
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "group": "edges",
+                "removed": false,
+                "selected": false,
+                "selectable": true,
+                "locked": false,
+                "grabbable": true,
+                "classes": ""
+            }
+        ]
+
+};
 
 export const SERVER_ADDRESS = "http://mozi.ai:3002";
 
