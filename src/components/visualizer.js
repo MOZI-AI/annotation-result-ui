@@ -60,22 +60,14 @@ export const CYTOSCAPE_STYLE = [
             "text-outline-width": 1
         }
     },
-    {
-        selector: 'node[group="biogrid-interaction-annotation"]',
-        css: {
-            shape: "ellipse",
-            width: 75,
-            height: 75
-        }
-    },
-    {
-        selector: 'node[id^="Uni"]',
+     {
+        selector: 'node[subgroup="Uniprot"]',
         css: {
             shape: "hexagon"
         }
     },
     {
-        selector: 'node[id^="ChEBI"]',
+        selector: 'node[subgroup="ChEBI"]',
         css: {
             shape: "diamond",
             height: 75
@@ -208,24 +200,25 @@ export class Visualizer extends React.Component {
                         position: event.renderedPosition
                     }
                 });
-                // my.focusOnNode(event.target.data().id);
             }.bind(this)
         );
-        /*  this.cy.nodes().on(
-            "unselect",
-            function(event) {
-              this.setState({ selectedNode: { node: null, position: null } });
-              my.removeFocus(event.target.data().id);
-            }.bind(this)
-          );*/
 
         this.cy.on("select", "edge", function (event) {
+
                 let pubMedIds = event.target.data().pubmedId.split(",");
-                if (pubMedIds.length > 0) {
+                if (pubMedIds[0] !== "") {
                     this.setState({
                             selectedEdge: {
                                 pubmed: pubMedIds,
                                 position: event.renderedPosition
+                            }
+                        }
+                    )
+                }
+                else {
+                    this.setState({
+                            selectedEdge: {
+                                pubmed: null
                             }
                         }
                     )
@@ -237,6 +230,14 @@ export class Visualizer extends React.Component {
                 this.setState({selectedEdge: {pubmed: null, position: null}});
             }.bind(this)
         );
+
+        this.cy.on("unselect", "node", function (evt) {
+            this.setState({
+                selectedNode: {
+                    node: null
+                }
+            })
+        }.bind(this));
 
 
         var options = {
@@ -260,7 +261,7 @@ export class Visualizer extends React.Component {
                     id: 'add',
                     content: "Add",
                     selector: "node",
-                    image: {src : addSvg, width : 12, height : 12, x : 6, y : 4},
+                    image: {src: addSvg, width: 12, height: 12, x: 6, y: 4},
                     onClickFunction: (evt) => {
                         this.focusOnNode(evt.target.data().id)
                     }
@@ -269,7 +270,7 @@ export class Visualizer extends React.Component {
                     id: 'remove',
                     content: "Remove",
                     selector: "node",
-                    image: {src : removeSvg, width : 12, height : 12, x : 6, y : 4},
+                    image: {src: removeSvg, width: 12, height: 12, x: 6, y: 4},
                     onClickFunction: (evt) => {
                         this.removeFocus(evt.target.data().id)
                     }
@@ -280,7 +281,6 @@ export class Visualizer extends React.Component {
         this.ctxMenu = this.cy.contextMenus(options);
         this.ctxMenu.hideMenuItem("add");
         this.ctxMenu.hideMenuItem("remove");
-
     }
 
     removeFilter() {
