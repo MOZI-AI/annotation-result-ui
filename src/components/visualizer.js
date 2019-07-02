@@ -186,7 +186,8 @@ export class Visualizer extends React.Component {
     componentDidMount() {
         this.cy = cytoscape({
             container: this.cy_wrapper.current,
-            hideEdgesOnViewport: true
+            hideEdgesOnViewport: true,
+            wheelSensitivity: 0.3
         });
         this.cy.add(
             this.props.graph.nodes.filter(n => n.data.group === "main" && n.data.id)
