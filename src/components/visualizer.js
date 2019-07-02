@@ -1,9 +1,15 @@
 import React, {Fragment} from "react";
+import {Button, Tooltip, Collapse, Checkbox, Progress, Icon} from "antd";
+import {getQueryValue} from "./annotation-result"
+import $ from "jquery";
+import removeSvg from "../assets/remove.svg"
+import addSvg from "../assets/add.svg";
+import 'cytoscape-context-menus/cytoscape-context-menus.css';
 
 const cytoscape = require("cytoscape");
 const cola = require("cytoscape-cola");
-import {Button, Tooltip, Collapse, Checkbox, Progress} from "antd";
-import {getQueryValue} from "./annotation-result"
+const contextMenus = require("cytoscape-context-menus");
+contextMenus(cytoscape, $);
 
 const AnnotationColorsLight = [
     "#c2ddf0",
@@ -131,11 +137,13 @@ export class Visualizer extends React.Component {
             selectedNode: {node: null, position: null},
             selectedEdge: {pubmed: null, position: null},
             history: [],
-            visibleAnn: []
+            visibleAnn: [],
+            filterMode: false
         };
         this.cy_wrapper = React.createRef();
         cytoscape.use(cola);
         this.registerEventListeners = this.registerEventListeners.bind(this);
+        this.removeFilter = this.removeFilter.bind(this);
     }
 
     randomLayout() {
@@ -151,7 +159,17 @@ export class Visualizer extends React.Component {
 
     concentricLayout() {
         if (this.layout) this.layout.stop();
-        this.layout = this.cy.layout({name: "concentric"});
+        this.layout = this.cy.layout(
+            {
+                name: "concentric",
+                concentric: function (node) {
+                    return node.degree();
+                },
+                levelWidth: function (nodes) {
+                    return 3;
+                }
+            }
+        );
         this.layout.run();
     }
 
@@ -180,74 +198,107 @@ export class Visualizer extends React.Component {
     }
 
     registerEventListeners() {
-    let my = this;
-    this.cy.nodes().on(
-      "select",
-      function(event) {
-        my.setState({
-          selectedNode: {
-            node: event.target.data(),
-            position: event.renderedPosition
-          }
-        });
-        // my.focusOnNode(event.target.data().id);
-      }.bind(this)
-    );
-    this.cy.nodes().on(
-      "unselect",
-      function(event) {
-        this.setState({ selectedNode: { node: null, position: null } });
-        my.removeFocus(event.target.data().id);
-      }.bind(this)
-    );
+        this.cy.nodes().on(
+            "select",
+            function (event) {
+                this.setState({
+                    selectedNode: {
+                        node: event.target.data(),
+                        position: event.renderedPosition
+                    }
+                });
+                // my.focusOnNode(event.target.data().id);
+            }.bind(this)
+        );
+        /*  this.cy.nodes().on(
+            "unselect",
+            function(event) {
+              this.setState({ selectedNode: { node: null, position: null } });
+              my.removeFocus(event.target.data().id);
+            }.bind(this)
+          );*/
 
-    this.cy.on("select", "edge", function (event) {
-        let pubMedIds = event.target.data().pubmedId.split(",");
-        if(pubMedIds.length > 0) {
-          this.setState({selectedEdge: {
-              pubmed: pubMedIds,
-              position: event.renderedPosition
-          }}
-          )
-        }
-      }.bind(this)
-    );
+        this.cy.on("select", "edge", function (event) {
+                let pubMedIds = event.target.data().pubmedId.split(",");
+                if (pubMedIds.length > 0) {
+                    this.setState({
+                            selectedEdge: {
+                                pubmed: pubMedIds,
+                                position: event.renderedPosition
+                            }
+                        }
+                    )
+                }
+            }.bind(this)
+        );
 
-    this.cy.on("unselect", "edge" , function (event) {
-        this.setState({ selectedEdge: { pubmed: null, position: null } });
-    }.bind(this)
-    );
+        this.cy.on("unselect", "edge", function (event) {
+                this.setState({selectedEdge: {pubmed: null, position: null}});
+            }.bind(this)
+        );
 
-    let tappedBefore;
-    let tappedTimeout;
 
-    this.cy.nodes().on("tap", function (evt) {
-        let tappedNow = evt.target;
-        if(tappedTimeout && tappedBefore){
-          clearTimeout(tappedTimeout);
-        }
-        if(tappedBefore === tappedNow){
-          tappedNow.trigger("doubleTap", evt);
-          tappedBefore = null;
-        }
-        else{
-          tappedTimeout = setTimeout(() => {tappedBefore = null}, 300);
-          tappedBefore = tappedNow;
-        }
-    });
-    this.cy.nodes().on("doubleTap" ,function (evt) {
-      let id = evt.target.data().id;
-      my.focusOnNode(id);
-    })
-  }
+        var options = {
+            menuItems: [
+                {
+                    id: 'filter',
+                    content: "Filter",
+                    selector: "node",
+                    onClickFunction: (evt) => {
+                        this.focusOnNode(evt.target.data().id);
+                        this.setState({
+                            filterMode: true
+                        });
+                        this.ctxMenu.showMenuItem("add");
+                        this.ctxMenu.showMenuItem("remove");
+                        this.ctxMenu.hideMenuItem("filter");
+                    },
+                    hasTrailingDivider: true
+                },
+                {
+                    id: 'add',
+                    content: "Add",
+                    selector: "node",
+                    image: {src : addSvg, width : 12, height : 12, x : 6, y : 4},
+                    onClickFunction: (evt) => {
+                        this.focusOnNode(evt.target.data().id)
+                    }
+                },
+                {
+                    id: 'remove',
+                    content: "Remove",
+                    selector: "node",
+                    image: {src : removeSvg, width : 12, height : 12, x : 6, y : 4},
+                    onClickFunction: (evt) => {
+                        this.removeFocus(evt.target.data().id)
+                    }
+                }
+            ]
+        };
 
-    removeFocus(id) {
+        this.ctxMenu = this.cy.contextMenus(options);
+        this.ctxMenu.hideMenuItem("add");
+        this.ctxMenu.hideMenuItem("remove");
+
+    }
+
+    removeFilter() {
         this.cy.batch(() => {
             this.cy.elements().style({opacity: 1});
         });
-        this.cy.zoom({
-            level: 1,
-            position: this.cy.getElementById(id).position()
+        this.setState({
+            filterMode: false
+        });
+        this.ctxMenu.showMenuItem("filter");
+        this.ctxMenu.hideMenuItem("add");
+        this.ctxMenu.hideMenuItem("remove");
+    }
+
+    removeFocus(id) {
+        const hood = this.cy.getElementById(id).closedNeighborhood();
+        this.cy.fit(hood);
+        this.cy.batch(() => {
+            hood.style({opacity: 0.1});
         });
     }
 
@@ -276,13 +327,21 @@ export class Visualizer extends React.Component {
 
     focusOnNode(id) {
         const hood = this.cy.getElementById(id).closedNeighborhood();
-        this.cy.fit(hood);
-        this.cy.batch(() => {
-            this.cy
-                .elements()
-                .difference(hood)
-                .style({opacity: 0.1});
-        });
+        // this.cy.fit(hood);
+        if (this.state.filterMode) {
+            this.cy.batch(() => {
+                hood.style({opacity: 1});
+            });
+        }
+        else {
+            this.cy.batch(() => {
+                this.cy
+                    .elements()
+                    .difference(hood)
+                    .style({opacity: 0.1});
+            });
+        }
+
     }
 
     downloadGraphJSON() {
@@ -554,6 +613,23 @@ export class Visualizer extends React.Component {
                         }
                     </div>
                 )}
+                {
+                    this.state.filterMode && (
+                        <div
+                            style={{
+                                position: "absolute",
+                                top: "38px",
+                                left: "98px",
+                                width: "200px",
+                                height: "200px"
+                            }}>
+                            <Tooltip placement="bottom" title="Remove Filter">
+                                <Icon onClick={this.removeFilter} type="close"
+                                      style={{fontSize: '48px', color: '#c7b8a2', opacity: 0.5}}/>
+                            </Tooltip>
+                        </div>
+                    )
+                }
             </Fragment>
         );
     }
