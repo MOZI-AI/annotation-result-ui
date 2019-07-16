@@ -39,7 +39,14 @@ export const CYTOSCAPE_COLA_CONFIG = {
     avoidOverlap: true,
     handleDisconnected: true,
     nodeSpacing: 20,
-    infinite: false
+    infinite: false,
+    boundingBox: { // to give cola more space to resolve initial overlaps
+          x1: 0,
+          y1: 0,
+          x2: 10000,
+          y2: 10000
+        },
+    edgeLengthVal: 35
 };
 
 export const CYTOSCAPE_STYLE = [
@@ -296,11 +303,13 @@ export class Visualizer extends React.Component {
     }
 
     removeFocus(id) {
-        const hood = this.cy.getElementById(id).closedNeighborhood();
-        this.cy.fit(hood);
-        this.cy.batch(() => {
-            hood.style({opacity: 0.1});
+        let node = this.cy.getElementById(id);
+        node.style({
+            opacity: 0.1
         });
+        node.connectedEdges().style({
+            opacity: 0.1
+        })
     }
 
     assignColorToAnnotations() {
