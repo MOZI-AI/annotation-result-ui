@@ -1,10 +1,13 @@
 import React, {Fragment} from "react";
-import {Button, Tooltip, Collapse, Checkbox, Progress, Icon} from "antd";
+import {Button, Tooltip, Collapse, Checkbox, Progress, Icon, Input} from "antd";
 import {getQueryValue} from "./annotation-result"
 import $ from "jquery";
 import removeSvg from "../assets/remove.svg"
 import addSvg from "../assets/add.svg";
 import 'cytoscape-context-menus/cytoscape-context-menus.css';
+
+
+const {Search} = Input;
 
 const cytoscape = require("cytoscape");
 const cola = require("cytoscape-cola");
@@ -41,11 +44,11 @@ export const CYTOSCAPE_COLA_CONFIG = {
     nodeSpacing: 20,
     infinite: false,
     boundingBox: { // to give cola more space to resolve initial overlaps
-          x1: 0,
-          y1: 0,
-          x2: 10000,
-          y2: 10000
-        },
+        x1: 0,
+        y1: 0,
+        x2: 10000,
+        y2: 10000
+    },
     edgeLengthVal: 35
 };
 
@@ -56,7 +59,9 @@ export const CYTOSCAPE_STYLE = [
             shape: "round-rectangle",
             width: "mapData(id.length, 0, 20, 50, 300)",
             height: "40",
-            content: "data(id)",
+            content: function (el) {
+                return el.data("id").split(":")[1]
+            },
             color: "#fff",
             "text-wrap": "wrap",
             "text-max-width": "350px",
@@ -67,7 +72,7 @@ export const CYTOSCAPE_STYLE = [
             "text-outline-width": 1
         }
     },
-     {
+    {
         selector: 'node[subgroup="Uniprot"]',
         css: {
             shape: "hexagon"
@@ -89,10 +94,15 @@ export const CYTOSCAPE_STYLE = [
         }
     },
     {
+        selector: ".query",
+        css: {
+            "background-color": "red"
+        }
+    },
+    {
         selector: 'node[group="Gene"]',
         style: {
             shape: "ellipse",
-            content: "data(id)",
             height: 75,
             color: "#fff",
             "text-outline-color": "#005bcd",
@@ -143,6 +153,7 @@ export class Visualizer extends React.Component {
         cytoscape.use(cola);
         this.registerEventListeners = this.registerEventListeners.bind(this);
         this.removeFilter = this.removeFilter.bind(this);
+        this.searchSymbol = this.searchSymbol.bind(this);
     }
 
     randomLayout() {
@@ -352,6 +363,16 @@ export class Visualizer extends React.Component {
             });
         }
 
+    }
+
+    searchSymbol(val) {
+        let node = this.cy.elements().filter(n => {
+            return n.data("id").split(":")[1] === val
+            }
+        );
+         const hood = node.closedNeighborhood();
+         node.addClass("query");
+         console.log(node.hasClass("query"));
     }
 
     downloadGraphJSON() {
@@ -640,6 +661,19 @@ export class Visualizer extends React.Component {
                         </div>
                     )
                 }
+                {/*<Search
+                    placeholder="input search text"
+                    enterButton="Search"
+                    allowClear
+                    style={{
+                        position: "absolute",
+                        top: "28px",
+                        right: "98px",
+                        width: "200px",
+                        height: "200px"
+                    }}
+                    onSearch={value => this.searchSymbol(value)}
+                />*/}
             </Fragment>
         );
     }
