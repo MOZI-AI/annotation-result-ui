@@ -59,9 +59,7 @@ export const CYTOSCAPE_STYLE = [
             shape: "round-rectangle",
             width: "mapData(id.length, 0, 20, 50, 300)",
             height: "40",
-            content: function (el) {
-                return el.data("id").split(":")[1]
-            },
+            content: "data(id)",
             color: "#fff",
             "text-wrap": "wrap",
             "text-max-width": "350px",
@@ -326,7 +324,9 @@ export class Visualizer extends React.Component {
     assignColorToAnnotations() {
         return this.props.annotations.reduce((acc, ann, i, arr) => {
             acc.push({
-                selector: 'edge[group="' + ann + '"]',
+                selector: this.cy.edges().filter(e => {
+                    return e.data().group.length === 1 && e.data().group.includes(ann)
+                }),
                 style: {
                     "line-color": AnnotationColorsLight[i],
                     "text-outline-color": AnnotationColorsLight[i],
@@ -334,9 +334,22 @@ export class Visualizer extends React.Component {
                 }
             });
             acc.push({
-                selector: 'node[group="' + ann + '"]',
+                selector: this.cy.nodes().filter(e => {
+                    return e.data().group.length === 1 && e.data().group.includes(ann)
+                }),
                 style: {
                     "background-color": AnnotationColorsDark[i],
+                    color: "#fff",
+                    "text-outline-width": 2,
+                    "text-outline-color": AnnotationColorsDark[i]
+                }
+            });
+            acc.push({
+                selector: this.cy.nodes().filter(e => {
+                    return e.data().group.length > 1 && e.data().group.includes(ann)
+                }),
+                style: {
+                    "background-color": "#58a39b ",
                     color: "#fff",
                     "text-outline-width": 2,
                     "text-outline-color": AnnotationColorsDark[i]
@@ -367,12 +380,12 @@ export class Visualizer extends React.Component {
 
     searchSymbol(val) {
         let node = this.cy.elements().filter(n => {
-            return n.data("id").split(":")[1] === val
+                return n.data("id").split(":")[1] === val
             }
         );
-         const hood = node.closedNeighborhood();
-         node.addClass("query");
-         console.log(node.hasClass("query"));
+        const hood = node.closedNeighborhood();
+        node.addClass("query");
+        console.log(node.hasClass("query"));
     }
 
     downloadGraphJSON() {
@@ -395,12 +408,12 @@ export class Visualizer extends React.Component {
             this.cy.batch(() => {
                 this.cy.add(
                     this.props.graph.nodes.filter(
-                        e => e.data.group === annotation && e.data.id
+                        e => e.data.group.includes(annotation) && e.data.id
                     )
                 );
                 this.cy.add(
                     this.props.graph.edges.filter(
-                        e => e.data.group === annotation && e.data.source && e.data.target
+                        e => e.data.group.includes(annotation) && e.data.source && e.data.target
                     )
                 );
             });
@@ -416,7 +429,10 @@ export class Visualizer extends React.Component {
             this.setState({
                 visibleAnn: updatedArr
             });
-            this.cy.remove(`[group='${annotation}']`);
+            let elms = this.cy.elements().filter(e => {
+                return e.data("group").length === 1 && e.data("group").includes(annotation)
+            });
+            this.cy.remove(elms);
         }
 
         this.randomLayout();
@@ -426,7 +442,7 @@ export class Visualizer extends React.Component {
     annotationPercentage(annotation) {
         return (
             (100 *
-                this.props.graph.edges.filter(e => e.data.group === annotation)
+                this.props.graph.edges.filter(e => e.data.group.includes(annotation))
                     .length) /
             this.props.graph.edges.length
         );
