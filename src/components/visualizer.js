@@ -6,7 +6,7 @@ import removeSvg from "../assets/remove.svg"
 import addSvg from "../assets/add.svg";
 import 'cytoscape-context-menus/cytoscape-context-menus.css';
 
-
+const _ = require("lodash");
 const {Search} = Input;
 
 const cytoscape = require("cytoscape");
@@ -349,7 +349,7 @@ export class Visualizer extends React.Component {
                     return e.data().group.length > 1 && e.data().group.includes(ann)
                 }),
                 style: {
-                    "background-color": "#58a39b ",
+                    "background-color": "#58a39b",
                     color: "#fff",
                     "text-outline-width": 2,
                     "text-outline-color": AnnotationColorsDark[i]
@@ -385,7 +385,6 @@ export class Visualizer extends React.Component {
         );
         const hood = node.closedNeighborhood();
         node.addClass("query");
-        console.log(node.hasClass("query"));
     }
 
     downloadGraphJSON() {
@@ -425,14 +424,41 @@ export class Visualizer extends React.Component {
             });
         }
         else {
+            let diff = _.xor(this.state.visibleAnn, [annotation]);
             let updatedArr = [...this.state.visibleAnn].filter(a => a !== annotation);
             this.setState({
                 visibleAnn: updatedArr
             });
-            let elms = this.cy.elements().filter(e => {
-                return e.data("group").length === 1 && e.data("group").includes(annotation)
+
+            this.cy.elements().remove();
+            if (diff.length === 0) {
+                {
+                    this.cy.batch(() => {
+                        this.cy.add(
+                            this.props.graph.nodes.filter(
+                                e => e.data.group.includes("main") && e.data.id
+                            )
+                        );
+                    });
+                }
+            }
+            else {
+                 diff.map(a => {
+                this.cy.batch(() => {
+                    this.cy.add(
+                        this.props.graph.nodes.filter(
+                            e => e.data.group.includes(a) && e.data.id
+                        )
+                    );
+                    this.cy.add(
+                        this.props.graph.edges.filter(
+                            e => e.data.group.includes(a) && e.data.source && e.data.target
+                        )
+                    );
+                });
             });
-            this.cy.remove(elms);
+            }
+
         }
 
         this.randomLayout();
