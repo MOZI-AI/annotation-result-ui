@@ -65,8 +65,8 @@ export const CYTOSCAPE_STYLE = [
             "text-max-width": "350px",
             "text-valign": "center",
             "text-halign": "center",
-            "background-color": "#565656",
-            "text-outline-color": "#565656",
+            /*"background-color": "#565656",
+            "text-outline-color": "#565656",*/
             "text-outline-width": 1
         }
     },
@@ -98,17 +98,48 @@ export const CYTOSCAPE_STYLE = [
         }
     },
     {
-        selector: 'node[group="Gene"]',
+        selector: function (e) {
+            return e.data().group.includes("gene-go-annotation")
+        },
         style: {
-            shape: "ellipse",
             height: 75,
             color: "#fff",
-            "text-outline-color": "#005bcd",
-            "background-color": "#005bcd"
+            "line-color": "#70b1dc",
+            "target-arrow-color": "#70b1dc",
+            "text-outline-color": "#70b1dc",
+            "background-color": "#70b1dc"
         }
     },
     {
-        selector: 'node[group="main"]',
+        selector: function (e) {
+            return e.data().group.includes("gene-pathway-annotation")
+        },
+        style: {
+            height: 75,
+            color: "#fff",
+            "line-color": "#776fa9",
+            "target-arrow-color":"#776fa9",
+            "text-outline-color": "#776fa9",
+            "background-color": "#776fa9"
+        }
+    },
+    {
+        selector: function (e) {
+            return e.data().group.includes("biogrid-interaction-annotation")
+        },
+        style: {
+            height: 75,
+            color: "#fff",
+            "line-color": "#b6a863",
+            "target-arrow-color":"#b6a863",
+            "text-outline-color": "#b6a863",
+            "background-color": "#b6a863"
+        }
+    },
+    {
+        selector: function (e) {
+            return e.data().group.includes("main")
+        },
         style: {
             shape: "ellipse",
             content: "data(id)",
@@ -119,22 +150,23 @@ export const CYTOSCAPE_STYLE = [
             "text-outline-color": "#005bcd"
         }
     },
-    {
-        selector: "edge",
-        css: {
-            "curve-style": "haystack",
-            "line-color": "#ccc",
-            width: 4
-        }
-    },
-    {
-        selector: "edge[group='gene-go-annotation']",
-        css: {
-            "curve-style": "straight",
-            "target-arrow-shape": "triangle",
-            "target-arrow-fill": "filled"
-        }
-    }
+    /*    {
+            selector: "edge",
+            css: {
+                "curve-style": "haystack",
+                "line-color": "#ccc",
+                width: 4
+            }
+        },*/
+    /* {
+         selector: "edge[group='gene-go-annotation']",
+         css: {
+
+             "curve-style": "straight",
+             "target-arrow-shape": "triangle",
+             "target-arrow-fill": "filled"
+         }
+     }*/
 ];
 
 export class Visualizer extends React.Component {
@@ -201,7 +233,7 @@ export class Visualizer extends React.Component {
             this.props.graph.nodes.filter(n => n.data.group === "main" && n.data.id)
         );
         this.toggleAnnotationVisibility(this.props.annotations[0], true);
-        this.cy.style(CYTOSCAPE_STYLE.concat(this.assignColorToAnnotations()));
+        this.cy.style(CYTOSCAPE_STYLE);
         this.registerEventListeners();
         this.randomLayout();
     }
@@ -321,7 +353,7 @@ export class Visualizer extends React.Component {
         })
     }
 
-    assignColorToAnnotations() {
+    /*assignColorToAnnotations() {
         return this.props.annotations.reduce((acc, ann, i, arr) => {
             acc.push({
                 selector: this.cy.edges().filter(e => {
@@ -335,7 +367,7 @@ export class Visualizer extends React.Component {
             });
             acc.push({
                 selector: this.cy.nodes().filter(e => {
-                    return e.data().group.length === 1 && e.data().group.includes(ann)
+                    return e.data().group.includes(ann)
                 }),
                 style: {
                     "background-color": AnnotationColorsDark[i],
@@ -344,20 +376,20 @@ export class Visualizer extends React.Component {
                     "text-outline-color": AnnotationColorsDark[i]
                 }
             });
-            acc.push({
-                selector: this.cy.nodes().filter(e => {
-                    return e.data().group.length > 1 && e.data().group.includes(ann)
-                }),
-                style: {
-                    "background-color": "#58a39b",
-                    color: "#fff",
-                    "text-outline-width": 2,
-                    "text-outline-color": AnnotationColorsDark[i]
-                }
-            });
+             acc.push({
+                 selector: this.cy.nodes().filter(e => {
+                     return e.data().group.length > 1 && e.data().group.includes(ann)
+                 }),
+                 style: {
+                     "background-color": "#58a39b",
+                     color: "#fff",
+                     "text-outline-width": 2,
+                     "text-outline-color": AnnotationColorsDark[i]
+                 }
+             });
             return acc;
         }, []);
-    }
+    }*/
 
     focusOnNode(id) {
         const hood = this.cy.getElementById(id).closedNeighborhood();
@@ -443,20 +475,20 @@ export class Visualizer extends React.Component {
                 }
             }
             else {
-                 diff.map(a => {
-                this.cy.batch(() => {
-                    this.cy.add(
-                        this.props.graph.nodes.filter(
-                            e => e.data.group.includes(a) && e.data.id
-                        )
-                    );
-                    this.cy.add(
-                        this.props.graph.edges.filter(
-                            e => e.data.group.includes(a) && e.data.source && e.data.target
-                        )
-                    );
+                diff.map(a => {
+                    this.cy.batch(() => {
+                        this.cy.add(
+                            this.props.graph.nodes.filter(
+                                e => e.data.group.includes(a) && e.data.id
+                            )
+                        );
+                        this.cy.add(
+                            this.props.graph.edges.filter(
+                                e => e.data.group.includes(a) && e.data.source && e.data.target
+                            )
+                        );
+                    });
                 });
-            });
             }
 
         }
