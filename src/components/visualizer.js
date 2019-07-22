@@ -4,6 +4,8 @@ import {getQueryValue} from "./annotation-result"
 import $ from "jquery";
 import removeSvg from "../assets/remove.svg"
 import addSvg from "../assets/add.svg";
+import filterSvg from "../assets/filter.svg";
+
 import 'cytoscape-context-menus/cytoscape-context-menus.css';
 
 const _ = require("lodash");
@@ -294,6 +296,7 @@ export class Visualizer extends React.Component {
                     id: 'filter',
                     content: "Filter",
                     selector: "node",
+                    image: {src: filterSvg, width: 18, height: 18, x: 8, y: 8},
                     onClickFunction: (evt) => {
                         this.focusOnNode(evt.target.data().id);
                         this.setState({
@@ -309,7 +312,7 @@ export class Visualizer extends React.Component {
                     id: 'add',
                     content: "Add",
                     selector: "node",
-                    image: {src: addSvg, width: 12, height: 12, x: 6, y: 4},
+                    image: {src: addSvg, width: 18, height: 18, x: 8, y: 8},
                     onClickFunction: (evt) => {
                         this.focusOnNode(evt.target.data().id)
                     }
@@ -318,12 +321,14 @@ export class Visualizer extends React.Component {
                     id: 'remove',
                     content: "Remove",
                     selector: "node",
-                    image: {src: removeSvg, width: 12, height: 12, x: 6, y: 4},
+                    image: {src: removeSvg, width: 18, height: 18, x: 8, y: 8},
                     onClickFunction: (evt) => {
                         this.removeFocus(evt.target.data().id)
                     }
                 }
-            ]
+            ],
+            menuItemClasses: ["context-menu-item"],
+          contextMenuClasses: ["context-menu"]
         };
 
         this.ctxMenu = this.cy.contextMenus(options);
@@ -402,10 +407,15 @@ export class Visualizer extends React.Component {
         else {
             this.cy.batch(() => {
                 this.cy
-                    .elements()
+                    .nodes()
                     .difference(hood)
                     .style({opacity: 0.1});
+                    this.cy
+                    .edges()
+                    .difference(hood)
+                    .style({opacity: 0});
             });
+
         }
 
     }
@@ -681,9 +691,10 @@ export class Visualizer extends React.Component {
                             borderRadius: "3px"
                         }}
                     >
-                        <h4>{`${this.state.selectedNode.node.name} ( ${
+                        <h4><b>{`${this.state.selectedNode.node.name}`}<br/>
+                        {` ( ${
                             this.state.selectedNode.node.id
-                            } )`}</h4>
+                            } )`}</b></h4>
                         <p>
                             {this.formatDescription(this.state.selectedNode.node.definition)}
                         </p>
@@ -720,19 +731,17 @@ export class Visualizer extends React.Component {
                 )}
                 {
                     this.state.filterMode && (
-                        <div
-                            style={{
-                                position: "absolute",
-                                top: "38px",
-                                left: "98px",
-                                width: "200px",
-                                height: "200px"
-                            }}>
-                            <Tooltip placement="bottom" title="Remove Filter">
-                                <Icon onClick={this.removeFilter} type="close"
-                                      style={{fontSize: '48px', color: '#c7b8a2', opacity: 0.5}}/>
-                            </Tooltip>
-                        </div>
+                        <div className="filter-controls">
+        <Tooltip placement="bottom" title="Remove Filter">
+          <Button
+            icon="close"
+            size="large"
+            onClick={this.removeFilter}
+            type="danger"
+          />
+        </Tooltip>
+      </div>
+
                     )
                 }
                 {/*<Search
