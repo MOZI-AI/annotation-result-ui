@@ -1,637 +1,600 @@
-import React, {Fragment} from "react";
-import {Button, Tooltip, Collapse, Checkbox, Progress, Icon} from "antd";
-import {getQueryValue} from "./annotation-result"
-import $ from "jquery";
-import removeSvg from "../assets/remove.svg"
+import React, { Fragment, useState, useEffect } from "react";
+import {Tooltip, Tree, message, Collapse, Button, Input} from 'antd';
+import { getParameterValueFromURL } from "../utility";
+import removeSvg from "../assets/remove.svg";
 import addSvg from "../assets/add.svg";
-import 'cytoscape-context-menus/cytoscape-context-menus.css';
+import filterSvg from "../assets/filter.svg";
+import "cytoscape-context-menus/cytoscape-context-menus.css";
+import $ from "jquery";
 
+const Color = require('color');
 const cytoscape = require("cytoscape");
 const cola = require("cytoscape-cola");
 const contextMenus = require("cytoscape-context-menus");
 contextMenus(cytoscape, $);
 
-const AnnotationColorsLight = [
-    "#c2ddf0",
-    "#d2cfe2",
-    "#e6e2cb",
-    "#E0D0E3",
-    "#C1CEE8",
-    "#C8DECC"
-];
-const AnnotationColorsDark = [
-    "#70b1dc",
-    "#776fa9",
-    "#b6a863",
-    "#a06fa9",
-    "#587bc1",
-    "#70a97a"
+const AnnotationGroups = [
+  {
+    group: "gene-go-annotation",    
+    subgroups: [
+      {subgroup: "cellular_component", color: '#F57C00'},
+      {subgroup: "molecular_function", color: '#F1C40F'},
+      {subgroup: "biological_process", color: '#8BC34A'}
+    ]
+  },
+  {
+    group: "gene-pathway-annotation",
+    color: '#9B59B6',
+    subgroups: [
+      {subgroup: "Reactome"},
+      {subgroup: "ChEBI"},
+    ]
+  },
+  {
+    group: "biogrid-interaction-annotation",
+    color: '#3498DB',
+    subgroups: []
+  }
 ];
 
-export const CYTOSCAPE_COLA_CONFIG = {
-    name: "cola",
-    animate: true,
-    maxSimulationTime: 3000,
-    ungrabifyWhileSimulating: true,
-    fit: true,
-    padding: 10,
-    randomize: true,
-    avoidOverlap: true,
-    handleDisconnected: true,
-    nodeSpacing: 20,
-    infinite: false
+const CYTOSCAPE_COLA_CONFIG = {
+  name: "cola",
+  fit: true,
+  animate: true,
+  padding: 10,
+  nodeSpacing: 20,
+  maxSimulationTime: 3000,
+  ungrabifyWhileSimulating: true,
+  randomize: true,
+  avoidOverlap: true,
+  handleDisconnected: true,
+  infinite: false
 };
 
-export const CYTOSCAPE_STYLE = [
-    {
-        selector: "node",
-        css: {
-            shape: "round-rectangle",
-            width: "mapData(id.length, 0, 20, 50, 300)",
-            height: "40",
-            content: "data(id)",
-            color: "#fff",
-            "text-wrap": "wrap",
-            "text-max-width": "350px",
-            "text-valign": "center",
-            "text-halign": "center",
-            "background-color": "#565656",
-            "text-outline-color": "#565656",
-            "text-outline-width": 1
-        }
-    },
-     {
-        selector: 'node[subgroup="Uniprot"]',
-        css: {
-            shape: "hexagon"
-        }
-    },
-    {
-        selector: 'node[subgroup="ChEBI"]',
-        css: {
-            shape: "diamond",
-            height: 75
-        }
-    },
-    {
-        selector: "node:selected",
-        css: {
-            "border-width": 5,
-            "border-color": "#AAD8FF",
-            "border-opacity": 1
-        }
-    },
-    {
-        selector: 'node[group="Gene"]',
-        style: {
-            shape: "ellipse",
-            content: "data(id)",
-            height: 75,
-            color: "#fff",
-            "text-outline-color": "#005bcd",
-            "background-color": "#005bcd"
-        }
-    },
-    {
-        selector: 'node[group="main"]',
-        style: {
-            shape: "ellipse",
-            content: "data(id)",
-            width: 75,
-            height: 75,
-            color: "#fff",
-            "background-color": "#005bcd",
-            "text-outline-color": "#005bcd"
-        }
-    },
-    {
-        selector: "edge",
-        css: {
-            "curve-style": "haystack",
-            "line-color": "#ccc",
-            width: 4
-        }
-    },
-    {
-        selector: "edge[group='gene-go-annotation']",
-        css: {
-            "curve-style": "straight",
-            "target-arrow-shape": "triangle",
-            "target-arrow-fill": "filled"
-        }
+const CYTOSCAPE_STYLE = [
+  {
+    selector: "node",
+    css: {
+      content: "data(id)",
+      shape: "round-rectangle",
+      width: "mapData(id.length, 0, 20, 50, 300)",
+      height: 40,
+      color: "#fff",
+      "text-wrap": "wrap",
+      "text-max-width": "350px",
+      "text-valign": "center",
+      "text-halign": "center",
+      "background-color": "#565656",
+      "text-outline-color": "#565656",
+      "text-outline-width": 1
     }
+  },
+  {
+    selector: n => n.data().subgroup === "Genes",
+    style: {
+      shape: "ellipse",
+      height: 75,
+      width: 75
+    }
+  },  
+  {
+    selector: 'node[subgroup="Uniprot"]',
+    css: { shape: "hexagon" }
+  },
+  {
+    selector: 'node[subgroup="ChEBI"]',
+    css: {
+      shape: "diamond",
+      height: 75,
+    }
+  },
+  {
+    selector: "node:selected",
+    css: {
+      "border-width": 5,
+      "border-color": "#87bef5"
+    }
+  },
+  {
+    selector: "edge",
+    css: {
+      "curve-style": "straight",
+      "line-color": "#ccc",
+      width: 4
+    }
+  },
+  {
+    selector: e => e.data().group.includes("gene-go-annotation"),
+    css: {
+      "target-arrow-shape": "triangle",
+      "target-arrow-fill": "filled"
+    }
+  }
 ];
 
-export class Visualizer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedNode: {node: null, position: null},
-            selectedEdge: {pubmed: null, position: null},
-            history: [],
-            visibleAnn: [],
-            filterMode: false
-        };
-        this.cy_wrapper = React.createRef();
-        cytoscape.use(cola);
-        this.registerEventListeners = this.registerEventListeners.bind(this);
-        this.removeFilter = this.removeFilter.bind(this);
-    }
+export function Visualizer(props) {
+  cytoscape.use(cola);
+  const cy_wrapper = React.createRef();
+  const [cy, setCy] = useState(undefined);
+  const [layout, setLayout] = useState(undefined);
+  const [filteredElements, setFilteredElements] = useState(undefined);
+  const [contextMenu, setContextMenu] = useState(undefined);
+  const [visibleNodeTypes, setVisibleNodeTypes] = useState([
+    "Genes",
+    "Uniprot"
+  ]);
+  const [visibleAnnotations, setVisibleAnnotations] = useState(["main%"]);
+  const [selectedNode, setSelectedNode] = useState({
+    node: null,
+    position: null
+  });
+  const [selectedEdge, setSelectedEdge] = useState({
+    pubmed: null
+  });
 
-    randomLayout() {
-        this.layout = this.cy.layout(CYTOSCAPE_COLA_CONFIG);
-        this.layout.run();
-    }
+  useEffect(function() {
+    setCy(
+      cytoscape({
+        container: cy_wrapper.current,
+        hideEdgesOnViewport: true,
+        wheelSensitivity: 0.3
+      })
+    );
+  }, []);
 
-    breadthFirstLayout() {
-        if (this.layout) this.layout.stop();
-        this.layout = this.cy.layout({name: "breadthfirst"});
-        this.layout.run();
-    }
+  useEffect(
+    function() {
+      cy && toggleAnnotationVisibility(visibleAnnotations);
+    },
+    [visibleAnnotations, visibleNodeTypes, cy]
+  );
 
-    concentricLayout() {
-        if (this.layout) this.layout.stop();
-        this.layout = this.cy.layout(
-            {
-                name: "concentric",
-                concentric: function (node) {
-                    return node.degree();
-                },
-                levelWidth: function (nodes) {
-                    return 3;
-                }
-            }
+  useEffect(
+    function() {
+      if (!cy) return;
+      if (filteredElements) {
+        cy.batch(() => filteredElements.style({ opacity: 1 }));
+        cy.batch(() =>
+          cy
+            .nodes()
+            .difference(filteredElements)
+            .style({ opacity: 0.1 })
         );
-        this.layout.run();
-    }
+        cy.edges()
+          .difference(filteredElements)
+          .style({ opacity: 0 });
+        contextMenu.showMenuItem("add");
+        contextMenu.showMenuItem("remove");
+        contextMenu.hideMenuItem("filter");
+      } else {
+        cy.batch(() => cy.elements().style({ opacity: 1 }));
+        contextMenu.showMenuItem("filter");
+        contextMenu.hideMenuItem("add");
+        contextMenu.hideMenuItem("remove");
+      }
+    },
+    [filteredElements]
+  );
 
-    takeScreenshot() {
-        const image = this.cy.jpg();
-        const link = document.createElement("a");
-        link.setAttribute("href", image);
-        link.setAttribute("download", "mozi-graph.jpg");
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-    }
-
-    componentDidMount() {
-        this.cy = cytoscape({
-            container: this.cy_wrapper.current,
-            hideEdgesOnViewport: true,
-            wheelSensitivity: 0.3
-        });
-        this.cy.add(
-            this.props.graph.nodes.filter(n => n.data.group === "main" && n.data.id)
-        );
-        this.toggleAnnotationVisibility(this.props.annotations[0], true);
-        this.cy.style(CYTOSCAPE_STYLE.concat(this.assignColorToAnnotations()));
-        this.registerEventListeners();
-        this.randomLayout();
-    }
-
-    registerEventListeners() {
-        this.cy.nodes().on(
-            "select",
-            function (event) {
-                this.setState({
-                    selectedNode: {
-                        node: event.target.data(),
-                        position: event.renderedPosition
-                    }
-                });
-            }.bind(this)
-        );
-
-        this.cy.on("select", "edge", function (event) {
-
-                let pubMedIds = event.target.data().pubmedId.split(",");
-                if (pubMedIds[0] !== "") {
-                    this.setState({
-                            selectedEdge: {
-                                pubmed: pubMedIds,
-                                position: event.renderedPosition
-                            }
-                        }
-                    )
-                }
-                else {
-                    this.setState({
-                            selectedEdge: {
-                                pubmed: null
-                            }
-                        }
-                    )
-                }
-            }.bind(this)
-        );
-
-        this.cy.on("unselect", "edge", function (event) {
-                this.setState({selectedEdge: {pubmed: null, position: null}});
-            }.bind(this)
-        );
-
-        this.cy.on("unselect", "node", function (evt) {
-            this.setState({
-                selectedNode: {
-                    node: null
-                }
-            })
-        }.bind(this));
-
-
+  useEffect(
+    function() {
+      if (cy) {
+        cy.style( [...CYTOSCAPE_STYLE, ...assignColorToAnnotations(), {
+          selector: n => n.data().group.includes("main"),
+          style: {
+            'background-fill': 'solid',
+            "background-color": "blue",
+            "text-outline-color": "blue"
+          }
+        }]);
         var options = {
-            menuItems: [
-                {
-                    id: 'filter',
-                    content: "Filter",
-                    selector: "node",
-                    onClickFunction: (evt) => {
-                        this.focusOnNode(evt.target.data().id);
-                        this.setState({
-                            filterMode: true
-                        });
-                        this.ctxMenu.showMenuItem("add");
-                        this.ctxMenu.showMenuItem("remove");
-                        this.ctxMenu.hideMenuItem("filter");
-                    },
-                    hasTrailingDivider: true
-                },
-                {
-                    id: 'add',
-                    content: "Add",
-                    selector: "node",
-                    image: {src: addSvg, width: 12, height: 12, x: 6, y: 4},
-                    onClickFunction: (evt) => {
-                        this.focusOnNode(evt.target.data().id)
-                    }
-                },
-                {
-                    id: 'remove',
-                    content: "Remove",
-                    selector: "node",
-                    image: {src: removeSvg, width: 12, height: 12, x: 6, y: 4},
-                    onClickFunction: (evt) => {
-                        this.removeFocus(evt.target.data().id)
-                    }
-                }
-            ]
+          menuItems: [
+            {
+              id: "filter",
+              content: "Filter",
+              selector: "node",
+              onClickFunction: e => {
+                addToFilter(e.target.data().id);
+              },
+              hasTrailingDivider: true,
+              image: { src: filterSvg, width: 18, height: 18, x: 8, y: 8 }
+            },
+            {
+              id: "add",
+              content: "Add",
+              selector: "node",
+              image: { src: addSvg, width: 18, height: 18, x: 8, y: 8 },
+              onClickFunction: e => addToFilter(e.target.data().id),
+              show: false
+            },
+            {
+              id: "remove",
+              content: "Remove",
+              selector: "node",
+              image: { src: removeSvg, width: 18, height: 18, x: 8, y: 8 },
+              onClickFunction: e => removeFromFilter(e.target.data().id),
+              show: false
+            }
+          ],
+          menuItemClasses: ["context-menu-item"],
+          contextMenuClasses: ["context-menu"]
         };
+        setContextMenu(cy.contextMenus(options));
+      }
+    },
+    [cy]
+  );
 
-        this.ctxMenu = this.cy.contextMenus(options);
-        this.ctxMenu.hideMenuItem("add");
-        this.ctxMenu.hideMenuItem("remove");
-    }
+  useEffect(
+    function() {
+      if (layout) layout.run();
+    },
+    [layout]
+  );
 
-    removeFilter() {
-        this.cy.batch(() => {
-            this.cy.elements().style({opacity: 1});
-        });
-        this.setState({
-            filterMode: false
-        });
-        this.ctxMenu.showMenuItem("filter");
-        this.ctxMenu.hideMenuItem("add");
-        this.ctxMenu.hideMenuItem("remove");
-    }
+  const randomLayout = () => {
+    setLayout(cy.layout(CYTOSCAPE_COLA_CONFIG));
+  };
 
-    removeFocus(id) {
-        const hood = this.cy.getElementById(id).closedNeighborhood();
-        this.cy.fit(hood);
-        this.cy.batch(() => {
-            hood.style({opacity: 0.1});
-        });
-    }
+  const breadthFirstLayout = () => {
+    setLayout(cy.layout({ name: "breadthfirst" }));
+  };
 
-    assignColorToAnnotations() {
-        return this.props.annotations.reduce((acc, ann, i, arr) => {
-            acc.push({
-                selector: 'edge[group="' + ann + '"]',
-                style: {
-                    "line-color": AnnotationColorsLight[i],
-                    "text-outline-color": AnnotationColorsLight[i],
-                    "target-arrow-color": AnnotationColorsDark[i]
-                }
-            });
-            acc.push({
-                selector: 'node[group="' + ann + '"]',
-                style: {
-                    "background-color": AnnotationColorsDark[i],
-                    color: "#fff",
-                    "text-outline-width": 2,
-                    "text-outline-color": AnnotationColorsDark[i]
-                }
-            });
-            return acc;
-        }, []);
-    }
+  const concentricLayout = () => {
+    setLayout(
+      cy.layout({
+        name: "concentric",
+        concentric: node => node.degree(),
+        levelWidth: () => 3
+      })
+    );
+  };
 
-    focusOnNode(id) {
-        const hood = this.cy.getElementById(id).closedNeighborhood();
-        // this.cy.fit(hood);
-        if (this.state.filterMode) {
-            this.cy.batch(() => {
-                hood.style({opacity: 1});
-            });
-        }
-        else {
-            this.cy.batch(() => {
-                this.cy
-                    .elements()
-                    .difference(hood)
-                    .style({opacity: 0.1});
-            });
-        }
+  const takeScreenshot = () => {
+    const link = document.createElement("a");
+    link.setAttribute("href", cy.jpg());
+    link.setAttribute("download", "mozi-graph.jpg");
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
 
-    }
+  const registerEventListeners = () => {
+    cy.nodes()
+      .on("select", e =>
+        setSelectedNode({
+          node: e.target.data(),
+          position: e.target.renderedPosition()
+        })
+      )
+      .on("unselect", e => setSelectedNode({ node: null }));
 
-    downloadGraphJSON() {
-        let exportJson = {
-            data: {name: "Annotation Service Export"},
-            elements: this.cy.json().elements
-        };
-        let json = JSON.stringify(exportJson);
-        const link = document.createElement("a");
-        let file = new Blob([json], {type: "text/json"});
-        link.href = URL.createObjectURL(file);
-        link.download = `annotation-graph-${getQueryValue("id")}.json`;
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-    }
+    cy.edges()
+      .on("select", e => {
+        let pubMedIds = e.target.data().pubmedId.split(",");
+        pubMedIds[0] !== ""
+          ? setSelectedEdge({
+              pubmed: pubMedIds
+            })
+          : setSelectedEdge({ pubmed: null });
+      })
+      .on("unselect", e => setSelectedEdge({ pubmed: null, position: null }));
+  };
 
-    toggleAnnotationVisibility(annotation, show) {
-        if (show) {
-            this.cy.batch(() => {
-                this.cy.add(
-                    this.props.graph.nodes.filter(
-                        e => e.data.group === annotation && e.data.id
-                    )
-                );
-                this.cy.add(
-                    this.props.graph.edges.filter(
-                        e => e.data.group === annotation && e.data.source && e.data.target
-                    )
-                );
-            });
+  const clearFilter = () => {
+    setFilteredElements(undefined);
+  };
 
-            let updatedArr = [...this.state.visibleAnn, annotation];
+  const removeFromFilter = id => {
+    const hood = cy
+      .getElementById(id)
+      .union(cy.getElementById(id).connectedEdges());
+    setFilteredElements(eles => eles.difference(hood));
+  };
 
-            this.setState({
-                visibleAnn: updatedArr
-            });
-        }
-        else {
-            let updatedArr = [...this.state.visibleAnn].filter(a => a !== annotation);
-            this.setState({
-                visibleAnn: updatedArr
-            });
-            this.cy.remove(`[group='${annotation}']`);
-        }
+  const addToFilter = id => {
+    const hood = cy.getElementById(id).closedNeighborhood();
+    setFilteredElements(eles => (eles ? eles.union(hood) : hood));
+  };
 
-        this.randomLayout();
-        this.registerEventListeners();
-    }
-
-    annotationPercentage(annotation) {
-        return (
-            (100 *
-                this.props.graph.edges.filter(e => e.data.group === annotation)
-                    .length) /
-            this.props.graph.edges.length
-        );
-    }
-
-    formatDescription(description) {
-        if (
-            description.indexOf("https://") > -1 ||
-            description.indexOf("http://") > -1
-        ) {
-            return (
-                <a href={description} rel="noopener noreferrer" target="_blank">
-                    Learn more
-                </a>
-            );
-        }
-        return description;
+  const downloadGraphJSON = () => {
+    let exportJson = {
+      data: { name: "Annotation Service Export" },
+      elements: cy.json().elements
     };
+    let json = JSON.stringify(exportJson);
+    const link = document.createElement("a");
+    let file = new Blob([json], { type: "text/json" });
+    link.href = URL.createObjectURL(file);
+    link.download = `annotation-graph-${getParameterValueFromURL("id")}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
 
-    formatPubMedIds() {
-        let pubIds = [];
+  const formatDescription = description => {
+    if (!description) return "";
+    return description.includes("https://") ||
+      description.includes("http://") ? (
+      <a href={description} rel="noopener noreferrer" target="_blank">
+        Learn more
+      </a>
+    ) : (
+      description
+    );
+  };
 
-        return pubIds
+  const toggleAnnotationVisibility = visibleAnnotations => {
+    const { nodes, edges } = props.graph;
+    const visibleNodes = nodes.filter(n => {
+      const { group, subgroup } = n.data;
+      return (
+        visibleAnnotations.some(a => {
+          const [g, sg] = a.split("%");
+          return (
+            group.includes(g) &&
+            (["Genes", "Uniprot"].includes(subgroup)
+              ? visibleNodeTypes.includes(subgroup)
+              : sg
+              ? sg === subgroup
+              : true)
+          );
+        }) || group.includes("main")
+      );
+    });
+    const visibleEdges = edges.filter(e => {
+      const { source, target } = e.data;
+      return (
+        visibleNodes.some(n => n.data.id === source) &&
+        visibleNodes.some(n => n.data.id === target)
+      );
+    });
+    cy.json({ elements: { nodes: visibleNodes } });
+    cy.add(visibleEdges);
+    randomLayout();
+    registerEventListeners();
+  };
+
+  const getAnnotationPercentage = (group, subgroup) => {
+    const { nodes } = props.graph;
+    let filteredNodes = group
+      ? nodes.filter(n => n.data.group.includes(group))
+      : nodes;
+    filteredNodes = subgroup
+      ? filteredNodes.filter(n => n.data.subgroup === subgroup)
+      : filteredNodes;
+    return (filteredNodes.length * 100) / nodes.length;
+  };
+
+  const assignColorToAnnotations = () => {
+    const styles = AnnotationGroups.reduce((acc, annotation) => {
+      const subGroupColors = annotation.subgroups.map(sg => {
+        return {
+          selector: n =>
+            n.data().group.includes(annotation.group) &&
+            n.data().subgroup === sg.subgroup,
+          style: {
+            "background-color": annotation.color || sg.color,
+            "text-outline-color": annotation.color || sg.color
+          }
+        };
+      });
+      return annotation.color? [...acc,  {
+        selector: n => n.data().group.includes(annotation.group),
+        style: {
+          "background-color": annotation.color,
+            "text-outline-color": annotation.color,
+            "line-color": Color(annotation.color).lighten(0.6).hex()
+        }
+      }, ...subGroupColors,]: [...acc, ...subGroupColors]
+
+    }, []);
+
+    const multipleGroupsStyle = {
+      selector: n => n.data().group.length > 1,
+      style: {
+        'background-fill': 'linear-gradient',
+        'background-gradient-direction': 'to-bottom-right',
+        'text-outline-color': '#565656',
+        'background-gradient-stop-colors': n => n.data().group.reduce( (acc, group) => {
+          if(group === 'main') return acc;
+          const color = AnnotationGroups.find(g => g.group === group).color ||'#565656';
+          return `${acc} ${color} ${color}`;
+        }, '' ),
+        'background-gradient-stop-positions': n => {
+          const group = n.data().group.filter(g => g!=='main');
+          const width = 100 / group.length;
+          let value = '0%';
+          for(let i = 1; i < group.length; i++) {
+            value += ` ${width * i}% ${width*i}%`
+          }          
+          return value + ' 100%';
+        }
+      }
     }
 
-    render() {
-        return (
-            <Fragment>
-                <div
-                    style={{
-                        position: "absolute",
-                        display: "flex",
-                        flexDirection: "column",
-                        backgroundColor: "#fff",
-                        borderRadius: "5px",
-                        top: 15,
-                        left: 15,
-                        opacity: 0.9,
-                        zIndex: 2
-                    }}
-                >
-                    <Tooltip placement="right" title="Go back">
-                        <Button
-                            size="large"
-                            style={{border: "none"}}
-                            icon="arrow-left"
-                            onClick={e => this.props.back()}
-                        />
-                    </Tooltip>
-                    <Tooltip placement="right" title="Randomize layout">
-                        <Button
-                            size="large"
-                            style={{border: "none"}}
-                            icon="swap"
-                            onClick={e => this.randomLayout()}
-                        />
-                    </Tooltip>
-                    <Tooltip placement="right" title="Breadth-first layout">
-                        <Button
-                            size="large"
-                            style={{border: "none"}}
-                            icon="gold"
-                            onClick={e => this.breadthFirstLayout()}
-                        />
-                    </Tooltip>
-                    <Tooltip placement="right" title="Concentric layout">
-                        <Button
-                            size="large"
-                            style={{border: "none"}}
-                            icon="play-circle"
-                            onClick={e => this.concentricLayout()}
-                        />
-                    </Tooltip>
-                    <Tooltip placement="right" title="Save screenshot">
-                        <Button
-                            size="large"
-                            style={{border: "none"}}
-                            icon="camera"
-                            onClick={e => this.takeScreenshot()}
-                            style={{border: "none"}}
-                        />
-                    </Tooltip>
-                    <Tooltip placement="right" title="Download scheme file">
-                        <Button
-                            size="large"
-                            style={{border: "none"}}
-                            icon="file-text"
-                            onClick={this.props.downloadSchemeFile}
-                        />
-                    </Tooltip>
-                    <Tooltip placement="right" title="Download graph as JSON">
-                        <Button
-                            size="large"
-                            style={{border: "none"}}
-                            icon="share-alt"
-                            onClick={e => this.downloadGraphJSON()}
-                        />
-                    </Tooltip>
-                    <Tooltip
-                        placement="right"
+
+    return [...styles, multipleGroupsStyle];   
+  }; 
+
+
+  const search = id => {
+    cy.batch(function() {
+      const selected = cy.nodes(`[id = "${id}"]`);
+      if (selected.size()) {
+        selected.select();
+        cy.zoom(2);
+        cy.center(selected);
+      } else {
+        message.warn("No matching results.");
+      }
+    });
+  };
+
+  const renderProgressBar = (percentage, color) => {
+    return (
+      <div className="percentage-wrapper">
+        <div
+          className="percentage-bar"
+          style={{
+            backgroundColor: color,
+            width: `${percentage}%`
+          }}
+        />
+      </div>
+    );
+  };
+
+  const renderDescriptionBox = (title, content) => {
+    return (
+      <div className="description-wrapper">
+        <h4>{title}</h4>
+        <p>{content}</p>
+      </div>
+    );
+  };
+
+  const renderFilterControls = () => {
+    return (
+      <div className="filter-controls">
+        <Tooltip placement="bottom" title="Remove Filter">
+          <Button
+            icon="close"
+            size="large"
+            onClick={clearFilter}
+            type="danger"
+          />
+        </Tooltip>
+      </div>
+    );
+  };
+
+  return (
+    <Fragment>
+      <div className="visualizer-wrapper" ref={cy_wrapper} />
+      <div className="visualizer-controls-wrapper">
+        <Tooltip placement="right" title="Go back">
+          <Button size="large" icon="arrow-left" onClick={props.back} />
+        </Tooltip>
+        <Tooltip placement="right" title="Randomize layout">
+          <Button size="large" icon="swap" onClick={randomLayout} />
+        </Tooltip>
+        <Tooltip placement="right" title="Breadth-first layout">
+          <Button size="large" icon="gold" onClick={breadthFirstLayout} />
+        </Tooltip>
+        <Tooltip placement="right" title="Concentric layout">
+          <Button size="large" icon="play-circle" onClick={concentricLayout} />
+        </Tooltip>
+        <Tooltip placement="right" title="Save screenshot">
+          <Button size="large" icon="camera" onClick={takeScreenshot} />
+        </Tooltip>
+        <Tooltip placement="right" title="Download scheme file">
+          <Button
+            size="large"
+            icon="file-text"
+            onClick={props.downloadSchemeFile}
+          />
+        </Tooltip>
+        <Tooltip placement="right" title="Download graph as JSON">
+          <Button size="large" icon="share-alt" onClick={downloadGraphJSON} />
+        </Tooltip>
+        <Tooltip
+          placement="right"
+          title={
+            <div>
+              <p>
+                Use the checkboxes to the right to filter the graph by
+                annotations.
+              </p>
+              <p>Click on a gene node to see annotations connected to it.</p>
+              <p>Click on an annotation to see which genes it annotates.</p>
+            </div>
+          }
+        >
+          <Button size="large" icon="info-circle" />
+        </Tooltip>
+      </div>
+      <div className="annotation-toggle-wrapper">
+        <Input.Search
+          placeholder="Node ID"
+          onSearch={search}
+          enterButton
+          style={{ margin: 5, marginBottom: 15 }}
+        />
+        <Collapse bordered={false} defaultActiveKey={["types"]}>
+          <Collapse.Panel header="Node types" key="types">
+            <Tree
+              defaultCheckedKeys={visibleNodeTypes}
+              onCheck={setVisibleNodeTypes}
+              checkable
+            >
+              <Tree.TreeNode key="Genes" title="Genes" />
+              <Tree.TreeNode key="Uniprot" title="Protiens" />
+            </Tree>
+          </Collapse.Panel>
+        </Collapse>
+        <Collapse bordered={false}>
+          <Collapse.Panel header="Annotations" key="annotation">
+            <Tree
+              defaultCheckedKeys={[]}
+              onCheck={setVisibleAnnotations}
+              checkable
+            >
+              {AnnotationGroups.filter(a => props.annotations.includes(a.group)).map((a, i) => {
+                return ( 
+                   <Tree.TreeNode
+                    key={`${a.group}%`}
+                    title={<span>{a.group}{renderProgressBar(
+                      getAnnotationPercentage(a.group),
+                      a.color || '#565656'
+                    )}</span>}
+                  >
+                    {a.subgroups.filter(s => props.annotations.includes(s.subgroup)).map(s => (             
+                       <Tree.TreeNode
+                        key={`${a.group}%${s.subgroup}`}
                         title={
-                            <div>
-                                <p>
-                                    Use the checkboxes to the right to filter the graph by
-                                    annotations.
-                                </p>
-                                <p>Click on a gene node to see annotations connected to it.</p>
-                                <p>Click on an annotation to see which genes it annotates.</p>
-                            </div>
+                          <span>
+                            {s.subgroup}
+                            {renderProgressBar(
+                              getAnnotationPercentage(a.group, s.subgroup),
+                              a.color || s.color
+                            )}
+                          </span>
                         }
-                    >
-                        <Button
-                            size="large"
-                            icon="info-circle"
-                            style={{border: "none"}}
-                        />
-                    </Tooltip>
-                </div>
-
-                <div
-                    style={{
-                        height: "100vh",
-                        width: "100vw"
-                    }}
-                    ref={this.cy_wrapper}
-                />
-                <div
-                    xs={10}
-                    sm={4}
-                    md={3}
-                    style={{
-                        position: "absolute",
-                        top: "15px",
-                        right: "15px",
-                        backgroundColor: "#fff",
-                        borderRadius: "5px",
-                        zIndex: 2,
-                        opacity: 0.9
-                    }}
-                >
-                    <Collapse bordered={false} style={{width: 300}}>
-                        <Collapse.Panel
-                            header="Annotations"
-                            key="annotation"
-                            style={{border: "none"}}
-                        >
-                            {this.props.annotations.map((a, i) => (
-                                <React.Fragment key={a}>
-                                    <Checkbox
-                                        checked={this.state.visibleAnn.includes(a)}
-                                        name={a.key}
-                                        onChange={e =>
-                                            this.toggleAnnotationVisibility(a, e.target.checked)
-                                        }
-                                        style={{marginRight: 10}}
-                                    />
-                                    {a}
-                                    <Progress
-                                        percent={this.annotationPercentage(a)}
-                                        strokeColor={AnnotationColorsDark[i]}
-                                        showInfo={false}
-                                    />
-                                </React.Fragment>
-                            ))}
-                        </Collapse.Panel>
-                    </Collapse>
-                </div>
-                {this.state.selectedNode.node && (
-                    <div
-                        style={{
-                            position: "absolute",
-                            bottom: 15,
-                            left: 15,
-                            width: "350px",
-                            backgroundColor: "#c9e1f9",
-                            border: "solid 1px #87BEF5",
-                            padding: "5px",
-                            borderRadius: "3px"
-                        }}
-                    >
-                        <h4>{`${this.state.selectedNode.node.name} ( ${
-                            this.state.selectedNode.node.id
-                            } )`}</h4>
-                        <p>
-                            {this.formatDescription(this.state.selectedNode.node.definition)}
-                        </p>
-                    </div>
-                )}
-                {this.state.selectedEdge.pubmed && (
-                    <div
-                        style={{
-                            position: "absolute",
-                            bottom: 15,
-                            left: 15,
-                            width: "350px",
-                            backgroundColor: "#c9e1f9",
-                            border: "solid 1px #87BEF5",
-                            padding: "5px",
-                            borderRadius: "3px"
-                        }}
-                    >
-                        <h4>PubMed Ids</h4>
-                        {
-                            this.state.selectedEdge.pubmed.map((pubId, i) =>
-                                (
-                                    <p key={i}>
-                                        {i + 1} - <a key={pubId[pubId.length - 5]} href={pubId}
-                                                     rel="noopener noreferrer" target="_blank">
-                                        Learn more
-                                    </a>
-                                    </p>
-                                )
-                            )
-
-                        }
-                    </div>
-                )}
-                {
-                    this.state.filterMode && (
-                        <div
-                            style={{
-                                position: "absolute",
-                                top: "38px",
-                                left: "98px",
-                                width: "200px",
-                                height: "200px"
-                            }}>
-                            <Tooltip placement="bottom" title="Remove Filter">
-                                <Icon onClick={this.removeFilter} type="close"
-                                      style={{fontSize: '48px', color: '#c7b8a2', opacity: 0.5}}/>
-                            </Tooltip>
-                        </div>
-                    )
-                }
-            </Fragment>
-        );
-    }
+                      /> 
+                    ))}
+                  </Tree.TreeNode>
+                );
+              })}
+            </Tree>
+          </Collapse.Panel>
+        </Collapse>
+      </div>
+      {selectedNode.node &&
+        renderDescriptionBox(
+          `${selectedNode.node.name} ( ${selectedNode.node.id.slice(
+            selectedNode.node.id.indexOf(":") + 1
+          )} )`,
+          formatDescription(selectedNode.node.definition)
+        )}
+      {selectedEdge.pubmed &&
+        renderDescriptionBox(
+          "PubMed Id",
+          selectedEdge.pubmed.map((pubId, i) => (
+            <p key={i}>
+              {i + 1} -{" "}
+              <a
+                key={pubId[pubId.length - 5]}
+                href={pubId}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Learn more
+              </a>
+            </p>
+          ))
+        )}
+      {filteredElements && renderFilterControls()}
+    </Fragment>
+  );
 }
