@@ -1,5 +1,5 @@
 export const SERVER_ADDRESS = process.env.SERVICE_ADDR
-  ? `http://${process.env.SERVICE_ADDR}:3002`
+  ? process.env.SERVICE_ADDR
   : "http://mozi.ai:3002";
 
 export const AnnotationStatus = {
